@@ -5,7 +5,7 @@ import { injectable } from "inversify";
 @injectable()
 class FetchQuotesRepository extends Repository implements QuotesRepository {
 	async getQuote(id: number): Promise<QuoteDto> {
-		const result = await this.fetcher.get(`${this.baseUrl}/quote/${id}`);
+		const result = await this.fetcher.get(`/quote/${id}`);
 		return await result.json();
 	}
 }

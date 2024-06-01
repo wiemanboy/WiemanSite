@@ -4,11 +4,9 @@ import types from "$lib/types";
 
 @injectable()
 class Repository {
-	public readonly baseUrl: string;
 	public readonly fetcher: Fetcher;
 
-	constructor(@inject(types.baseUrl) baseUrl: string, @inject(types.fetcher) fetcher: Fetcher) {
-		this.baseUrl = baseUrl;
+	constructor(@inject(types.fetcher) fetcher: Fetcher) {
 		this.fetcher = fetcher;
 	}
 }
