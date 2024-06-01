@@ -4,19 +4,29 @@
 	import { container } from "../../../inversify.config";
 	import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
 	import types from "$lib/types";
+	import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
 
 	const quotesRepository = container.get<QuotesRepository>(types.quotesRepository);
 
-	let quote = "";
+	let quote = {
+		quote: "",
+		author: "",
+	} as QuoteDto;
 
 	onMount(() => {
-		quotesRepository.getQuote(1).then((result) => {
-			console.log(result);
-			quote = result.quote;
+		quotesRepository.getRandomQuote().then((result) => {
+			quote = result;
 		});
-	})
+	});
 </script>
 
-<h1>{$t("language")}</h1>
-<p>Visit <a class="text-link dark:text-link-light hover:text-link-hover dark:hover:text-link-light-hover" href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<div>Quote: {quote}</div>
+<main class="flex flex-col justify-center items-center text-center flex-grow h-screen">
+	<h1 class="text-7xl flex">{$t("underConstruction")}!</h1>
+	<div class="flex flex-grow flex-col justify-center">
+		<div class="front-themed border rounded p-4">
+			<div class="font-bold mb-2">{$t("quotes")}:</div>
+			<div>{quote.quote}</div>
+			<div>- {quote.author}</div>
+		</div>
+	</div>
+</main>

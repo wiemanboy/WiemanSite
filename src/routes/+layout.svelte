@@ -2,6 +2,6 @@
 	import "./app.scss";
 </script>
 
-<div class="themed h-screen">
+<div class="bg-themed h-screen">
 	<slot />
 </div>

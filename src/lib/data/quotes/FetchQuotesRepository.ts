@@ -1,12 +1,18 @@
 import Repository from "$lib/data/Repository";
 import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
 import { injectable } from "inversify";
+import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
 
 @injectable()
 class FetchQuotesRepository extends Repository implements QuotesRepository {
 	async getQuote(id: number): Promise<QuoteDto> {
 		const result = await this.fetcher.get(`/quote/${id}`);
-		return await result.json();
+		return result.json();
+	}
+
+	async getRandomQuote(): Promise<QuoteDto> {
+		const result = await this.fetcher.get(`/quote/${Math.floor(Math.random() * 100)}`);
+		return result.json();
 	}
 }
 
