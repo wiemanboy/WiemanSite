@@ -1,6 +1,6 @@
-import Repository from "$lib/data/Repository";
-import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
 import { injectable } from "inversify";
+import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
+import Repository from "$lib/data/Repository";
 import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
 
 @injectable()

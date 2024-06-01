@@ -1,5 +1,5 @@
-import type Fetcher from "$lib/network/Fetcher";
 import { inject, injectable } from "inversify";
+import type Fetcher from "$lib/network/Fetcher";
 import types from "$lib/types";
 
 @injectable()
