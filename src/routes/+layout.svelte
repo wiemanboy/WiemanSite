@@ -2,4 +2,6 @@
 	import "./app.scss";
 </script>
 
-<slot />
+<div class="themed h-screen">
+	<slot />
+</div>
