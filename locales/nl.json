@@ -1,5 +1,8 @@
 {
-	"language": "Nederlands",
-	"underConstruction": "Deze pagina is nog in ontwikkeling",
-	"quotes": "In de tussentijd is hier een willekeurig citaat om je mee te vermaken"
+    "language": "Nederlands",
+    "underConstruction": "Deze pagina is nog in ontwikkeling",
+    "quotes": {
+        "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
+        "loading": "Quote ophalen..."
+    }
 }

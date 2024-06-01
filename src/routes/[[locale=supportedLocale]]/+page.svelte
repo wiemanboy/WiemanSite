@@ -24,9 +24,13 @@
 	<h1 class="flex text-4xl sm:text-7xl">{$t("underConstruction")}!</h1>
 	<div class="mx-2 flex flex-grow flex-col justify-center">
 		<div class="front-themed rounded border p-4">
-			<div class="mb-2 font-bold">{$t("quotes")}:</div>
-			<div>{quote.quote}</div>
-			<div>- {quote.author}</div>
+			<div class="mb-2 font-bold">{$t("quotes.message")}:</div>
+			{ #if quote.quote !== "" }
+				<div>{quote.quote}</div>
+				<div>- {quote.author}</div>
+			{:else }
+				<div>{$t("quotes.loading")}...</div>
+			{/if}
 		</div>
 	</div>
 </main>
