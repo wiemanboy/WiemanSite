@@ -40,6 +40,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"dotenv": "^16.4.5",
+		"inversify": "^6.0.2",
+		"reflect-metadata": "^0.2.2",
 		"sass": "^1.77.4",
 		"svelte-i18n": "^4.0.0"
 	}

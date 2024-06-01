@@ -8,7 +8,7 @@ export default defineConfig({
 	},
 	server: {
 		fs: {
-			allow: ["./locales"],
+			allow: ["./locales", "./inversify.config.ts"],
 		},
 	},
 });
