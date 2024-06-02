@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { t } from "svelte-i18n";
+	import MdiGithub from "virtual:icons/mdi/github";
 	import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
 	import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
 	import types from "$lib/types";
 	import { container } from "../../../inversify.config";
+	import Link from "../../components/Link.svelte";
 
 	const quotesRepository = container.get<QuotesRepository>(types.quotesRepository);
 
@@ -32,5 +34,10 @@
 				<div class="underline">{error.message}</div>
 			{/await}
 		</div>
+		<Link
+			class="flex justify-center"
+			to="https://github.com/wiemanboy">
+			<MdiGithub />
+		</Link>
 	</div>
 </main>
