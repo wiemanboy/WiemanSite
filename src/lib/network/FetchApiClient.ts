@@ -1,9 +1,9 @@
 import { inject, injectable } from "inversify";
-import type Fetcher from "$lib/network/Fetcher";
+import type ApiClient from "$lib/network/ApiClient";
 import types from "$lib/types";
 
 @injectable()
-class FetchFetcher implements Fetcher {
+class FetchApiClient implements ApiClient {
 	public readonly baseUrl: string;
 
 	constructor(@inject(types.baseUrl) baseUrl: string) {
@@ -41,4 +41,4 @@ class FetchFetcher implements Fetcher {
 	}
 }
 
-export default FetchFetcher;
+export default FetchApiClient;

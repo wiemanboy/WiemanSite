@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import type Fetcher from "$lib/network/Fetcher";
+import type ApiClient from "$lib/network/ApiClient";
 import types from "$lib/types";
 import { container } from "../../../inversify.config";
 
@@ -7,11 +7,11 @@ import { container } from "../../../inversify.config";
 Tests if the Fetcher class is working as expected.
  */
 
-let fetcher: Fetcher;
+let fetcher: ApiClient;
 
 beforeEach(() => {
 	container.rebind(types.baseUrl).toConstantValue("https://dummyjson.com");
-	fetcher = container.get(types.fetcher);
+	fetcher = container.get(types.apiClient);
 });
 
 describe("Fetcher", () => {
