@@ -200,6 +200,17 @@ the [icon sets](https://icon-sets.iconify.design/).
 
 ---
 
+## Testing
+
+This project uses [vitest](https://vitest.dev/) for unit testing and [Playwright](https://playwright.dev/) for
+end-to-end testing. You can run the tests with `npm run test`, Or use `npm run test:unit` and `npm run test:integration`
+to run the tests separately. Vitest supports coverage reports, to generate a coverage report
+use `npm run test:coverage`. Coverage reports will be placed in `test-results/coverage`.
+
+Tests are located in the tests folder, when creating a new test file it should have the same directory structure in
+tests as the file you are testing in src. All test files should end with `.test.ts` and integration tests (using
+Playwright) should end with `.integration.test.ts`.
+
 ## Building
 
 To create a production version of the app:
