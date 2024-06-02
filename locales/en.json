@@ -3,6 +3,7 @@
     "underConstruction": "This page is under construction",
     "quotes": {
         "message": "In the meantime, here is a random quotes to keep you entertained",
-        "loading": "Getting quote..."
+        "loading": "Getting quote...",
+        "error": "Something went wrong while getting your quote"
     }
 }
