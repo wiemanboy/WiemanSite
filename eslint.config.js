@@ -33,6 +33,12 @@ export default [
 					groups: [["^\\u0000", "^node:", "^@?\\w", "^", "^\\."]],
 				},
 			],
+			"@typescript-eslint/no-unused-vars": [
+				"error",
+				{
+					varsIgnorePattern: "^\\$\\$Props$",
+				},
+			],
 		},
 	},
 	{

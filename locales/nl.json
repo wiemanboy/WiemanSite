@@ -1,8 +1,12 @@
 {
     "language": "Nederlands",
-    "underConstruction": "Deze pagina is nog in ontwikkeling",
+    "underConstruction": "Dit onderdeel is nog in ontwikkeling",
+    "sourceCode": {
+        "linkToMessage": "Neem een kijkje achter de schermen"
+    },
     "quotes": {
         "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
-        "loading": "Quote ophalen..."
+        "loading": "Quote ophalen...",
+        "error": "Er is iets misgegaan bij het ophalen van uw quote"
     }
 }

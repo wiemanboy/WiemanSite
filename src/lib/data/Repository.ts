@@ -1,13 +1,13 @@
 import { inject, injectable } from "inversify";
-import type Fetcher from "$lib/network/Fetcher";
+import type ApiClient from "$lib/network/ApiClient";
 import types from "$lib/types";
 
 @injectable()
 class Repository {
-	public readonly fetcher: Fetcher;
+	public readonly apiClient: ApiClient;
 
-	constructor(@inject(types.fetcher) fetcher: Fetcher) {
-		this.fetcher = fetcher;
+	constructor(@inject(types.apiClient) apiClient: ApiClient) {
+		this.apiClient = apiClient;
 	}
 }
 

@@ -6,12 +6,12 @@ import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
 @injectable()
 class FetchQuotesRepository extends Repository implements QuotesRepository {
 	async getQuote(id: number): Promise<QuoteDto> {
-		const result = await this.fetcher.get(`/quote/${id}`);
+		const result = await this.apiClient.get(`/quote/${id}`);
 		return result.json();
 	}
 
 	async getRandomQuote(): Promise<QuoteDto> {
-		const result = await this.fetcher.get(`/quote/${Math.floor(Math.random() * 100)}`);
+		const result = await this.apiClient.get(`/quote/${Math.floor(Math.random() * 100)}`);
 		return result.json();
 	}
 }
