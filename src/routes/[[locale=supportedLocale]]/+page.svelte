@@ -17,6 +17,7 @@
 	onMount(() => {
 		promise = quotesRepository.getRandomQuote();
 	});
+
 </script>
 
 <main class="flex h-screen flex-grow flex-col items-center justify-center text-center">
@@ -38,7 +39,9 @@
 		</div>
 		<Link
 			class="flex justify-center"
-			to="https://github.com/wiemanboy">
+			to="https://github.com/wiemanboy"
+			undecorated
+		>
 			<MdiGithub />
 		</Link>
 	</div>

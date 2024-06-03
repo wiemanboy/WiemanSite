@@ -8,10 +8,6 @@ export default {
 			link: {
 				DEFAULT: "#0070f3",
 				hover: "#0366d6",
-				light: {
-					DEFAULT: "#4788d6",
-					hover: "#539bf5",
-				},
 			},
 			primary: {
 				light: {
