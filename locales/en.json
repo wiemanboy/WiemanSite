@@ -1,6 +1,9 @@
 {
     "language": "English",
-    "underConstruction": "This page is under construction",
+    "underConstruction": "This part is under construction",
+    "sourceCode": {
+        "linkToMessage": "Take a peek behind the scenes"
+    },
     "quotes": {
         "message": "In the meantime, here is a random quotes to keep you entertained",
         "loading": "Getting quote...",
