@@ -8,5 +8,8 @@
         "message": "In the meantime, here is a random quotes to keep you entertained",
         "loading": "Getting quote...",
         "error": "Something went wrong while getting your quote"
+    },
+    "home": {
+        "title": "Welcome to my website"
     }
 }

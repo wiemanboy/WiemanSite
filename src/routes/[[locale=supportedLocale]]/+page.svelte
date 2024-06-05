@@ -10,6 +10,7 @@
 	import UnderConstruction from "../../components/Placeholder.svelte";
 
 	const quotesRepository = container.get<QuotesRepository>(types.quotesRepository);
+	const tBase = "home.";
 
 	let promise: Promise<QuoteDto>;
 
@@ -37,3 +38,8 @@
 		</div>
 	</UnderConstruction>
 </main>
+
+<svelte:head>
+	<title>{$t(tBase + "title")}</title>
+</svelte:head>
+
