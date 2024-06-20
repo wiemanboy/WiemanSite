@@ -1,5 +1,8 @@
 FROM node:21-slim AS builder
 
+ARG PUBLIC_API_BASE_URL
+ENV PUBLIC_API_BASE_URL ${PUBLIC_API_BASE_URL}
+
 WORKDIR /app
 
 COPY package.json ./
