@@ -6,7 +6,6 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
 COPY . ./
-ENV PUBLIC_API_BASE_URL="undefined"
 RUN npm run build
 
 FROM node:21-slim
