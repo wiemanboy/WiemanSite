@@ -1,0 +1,13 @@
+.svelte-kit
+.git
+.github
+.gitignore
+.run
+tests
+test-results
+.env
+.env.example
+.prettierignore
+.prettierrc
+eslint.config.js
+README.md
