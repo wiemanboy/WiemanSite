@@ -1,4 +1,4 @@
-FROM node:21-slim AS builder
+FROM node:22-slim AS builder
 
 ARG PUBLIC_API_BASE_URL
 ENV PUBLIC_API_BASE_URL ${PUBLIC_API_BASE_URL}
@@ -11,7 +11,7 @@ RUN npm install
 COPY . ./
 RUN npm run build
 
-FROM node:21-slim
+FROM node:22-slim
 
 WORKDIR /app
 COPY --from=builder /app .
