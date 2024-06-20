@@ -5,7 +5,6 @@
 .run
 tests
 test-results
-.env
 .env.example
 .prettierignore
 .prettierrc
