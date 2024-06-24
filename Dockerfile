@@ -16,6 +16,5 @@ FROM node:22-slim
 WORKDIR /app
 COPY --from=builder /app .
 
-ENV HOST=0.0.0.0
-EXPOSE 4173
-CMD ["npm","run", "preview","--", "--host", "0.0.0.0"]
+EXPOSE 3000
+CMD ["npm", "run", "start"]
