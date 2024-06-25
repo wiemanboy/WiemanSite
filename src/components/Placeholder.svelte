@@ -14,10 +14,10 @@ This is a component that will act as a placeholder for components that are not y
 </script>
 
 <div {...$$restProps}>
-	<div class="flex flex-grow flex-col p-3 border rounded">
+	<div class="flex flex-grow flex-col p-3 border rounded text-center">
 		<div class="flex text-2xl font-extrabold justify-center">{$t("underConstruction")}!</div>
 		<IcRoundConstruction
-			class="flex flex-grow flex-row h-max w-max text-center mx-auto" />
+			class="flex flex-grow flex-row h-max w-max text-center mx-auto max-w-72 sm:max-w-full" />
 		<slot />
 		<Link
 			class="flex mx-auto mt-2"
