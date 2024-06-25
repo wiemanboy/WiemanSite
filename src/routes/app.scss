@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 @layer themes {
-	.bg-themed {
-		@apply bg-primary-light dark:bg-primary-dark dark:text-white;
-	}
+  .bg-themed {
+    @apply bg-primary-light dark:bg-primary-dark dark:text-white;
+  }
 
-	.front-themed {
-		@apply bg-secondary-light dark:bg-secondary-dark;
-	}
+  .front-themed {
+    @apply bg-secondary-light dark:bg-secondary-dark;
+  }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
