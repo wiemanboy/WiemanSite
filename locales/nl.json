@@ -16,9 +16,10 @@
             "error": "Er is iets misgegaan bij het ophalen van uw quote"
         },
         "profile": {
-            "introduction": "Hallo, ik ben",
+            "introduction": "Hallo, mijn naam is",
+            "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen.",
             "skills": {
-                "title": "Hier zijn enkele van mijn vaardigheden",
+                "title": "Hier zijn een aantal van mijn vaardigheden",
                 "section": {
                     "programmingLanguages": "Programmeer Talen",
                     "frameworks": "Frameworks",

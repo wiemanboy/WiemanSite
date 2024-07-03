@@ -100,6 +100,9 @@ Profile
 				/>
 			</div>
 			<div class="flex flex-grow flex-col gap-5">
+				<div>
+					{$t(tBase + "description")}
+				</div>
 				<SkillsList {skills} />
 				<SocialList {socials} />
 			</div>

@@ -17,6 +17,7 @@
         },
         "profile": {
             "introduction": "Hello, my name is",
+            "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games.",
             "skills": {
                 "title": "These are some of the skills i posses",
                 "section": {
