@@ -1,15 +1,35 @@
 {
     "language": "Nederlands",
-    "underConstruction": "Dit onderdeel is nog in ontwikkeling",
     "sourceCode": {
         "linkToMessage": "Neem een kijkje achter de schermen"
     },
-    "quotes": {
-        "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
-        "loading": "Quote ophalen...",
-        "error": "Er is iets misgegaan bij het ophalen van uw quote"
+    "page": {
+        "home": {
+            "title": "Welkom op mijn website"
+        }
     },
-    "home": {
-        "title": "Welkom op mijn website"
+    "component": {
+        "underConstruction": "Dit onderdeel is nog in ontwikkeling",
+        "quotes": {
+            "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
+            "loading": "Quote ophalen...",
+            "error": "Er is iets misgegaan bij het ophalen van uw quote"
+        },
+        "profile": {
+            "introduction": "Hallo, mijn naam is",
+            "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen.",
+            "skills": {
+                "title": "Hier zijn een aantal van mijn vaardigheden",
+                "section": {
+                    "programmingLanguages": "Programmeer Talen",
+                    "frameworks": "Frameworks",
+                    "tools": "Tooling",
+                    "concepts": "Concepten"
+                }
+            },
+            "socials": {
+                "title": "Waar je me kunt vinden"
+            }
+        }
     }
 }

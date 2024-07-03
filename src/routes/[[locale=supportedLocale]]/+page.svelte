@@ -1,42 +1,76 @@
 <!-- Home page -->
 
 <script lang="ts">
-	import { onMount } from "svelte";
 	import { t } from "svelte-i18n";
-	import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
-	import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
-	import types from "$lib/types";
-	import { container } from "../../../inversify.config";
-	import UnderConstruction from "../../components/Placeholder.svelte";
+	import Profile from "../../components/profile/Profile.svelte";
 
-	const quotesRepository = container.get<QuotesRepository>(types.quotesRepository);
-	const tBase = "home.";
+	const tBase = "page.home.";
 
-	let promise: Promise<QuoteDto>;
+	const skills = [
+		{
+			title: $t("component.profile.skills.section.programmingLanguages"),
+			skills: ["Java", "C#", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
+		},
+		{
+			title: $t("component.profile.skills.section.frameworks"),
+			skills: ["Spring boot", "ASP.NET Core", "Laravel", "Svelte", "SvelteKit", "React.js", "Next.js", "Vue.js", "Nuxt.js"],
+		},
+		{
+			title: $t("component.profile.skills.section.tools"),
+			skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Figma"],
+		},
+		{
+			title: $t("component.profile.skills.section.concepts"),
+			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile"],
+		},
+	];
 
-	onMount(() => {
-		promise = quotesRepository.getRandomQuote();
-	});
-
+	const socials = [
+		{
+			username: "wiemanboy",
+			url: "https://github.com/wiemanboy",
+			icon: "github",
+		},
+		{
+			username: "Jarno Wieman",
+			url: "https://www.linkedin.com/in/jarnowieman/",
+			icon: "linkedin",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://stackoverflow.com/users/20792492/wiemanboy",
+			icon: "stackoverflow",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://www.instagram.com/wiemanboy/",
+			icon: "instagram",
+		},
+		{
+			username: "@wiemanboy",
+			url: "https://x.com/wiemanboy",
+			icon: "twitter",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://steamcommunity.com/id/wiemanboy/",
+			icon: "steam",
+		},
+		{
+			username: "u/wiemanboy",
+			url: "https://www.reddit.com/user/wiemanboy/",
+			icon: "reddit",
+		},
+		{
+			username: "r/jarno",
+			url: "https://www.reddit.com/r/Jarno/",
+			icon: "reddit",
+		},
+	];
 </script>
 
 <main class="flex flex-grow flex-col h-screen">
-	<UnderConstruction class="flex flex-grow flex-col h-max m-5">
-		<div class="front-themed rounded border p-4 mx-10 flex flex-col text-center">
-			<div class="mb-2 font-bold">{$t("quotes.message")}:</div>
-			{#await promise}
-				<div>{$t("quotes.loading")}...</div>
-			{:then quote}
-				{#if quote !== undefined}
-					<div class="lowercase">{quote.quote}</div>
-					<div>- {quote.author}</div>
-				{/if}
-			{:catch error}
-				<div>{$t("quotes.error")}!</div>
-				<div class="underline">{error.message}</div>
-			{/await}
-		</div>
-	</UnderConstruction>
+	<Profile class="m-3" name="Jarno Wieman" {skills} {socials} />
 </main>
 
 <svelte:head>
