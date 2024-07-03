@@ -1,6 +1,8 @@
 <!--
 SkillSection
 
+Simple component to display a section of skills in the SkillsList component.
+It includes a title and a list of skills.
 -->
 
 <script lang="ts">

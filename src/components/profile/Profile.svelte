@@ -7,7 +7,7 @@ Profile
 	import { Image } from "@unpic/svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
-	import SkillsList from "./skills/SkillsList.svelte";
+	import SkillsList from "./skills/SkillList.svelte";
 
 	const tBase = "component.profile.";
 

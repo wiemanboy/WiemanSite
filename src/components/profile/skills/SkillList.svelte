@@ -1,7 +1,8 @@
 <!--
-SkillsList
+SkillList
 
 Simple component to display a list of skills in the Profile component.
+Skills are grouped by sections.
 -->
 
 <script lang="ts">

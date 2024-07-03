@@ -1,7 +1,7 @@
 <!--
 SkillItem
 
-Simple component to display a skill in the SkillList component.
+Simple component to display a skill in the SkillSection component.
 -->
 
 <script lang="ts">
