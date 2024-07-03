@@ -8,6 +8,8 @@ Profile
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import SkillsList from "./skills/SkillList.svelte";
+	import SocialList from "./socials/SocialList.svelte";
+
 
 	const tBase = "component.profile.";
 
@@ -35,6 +37,49 @@ Profile
 			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile"],
 		},
 	];
+
+	const socials = [
+		{
+			username: "wiemanboy",
+			url: "https://github.com/wiemanboy",
+			icon: "github",
+		},
+		{
+			username: "Jarno Wieman",
+			url: "https://www.linkedin.com/in/jarnowieman/",
+			icon: "linkedin",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://stackoverflow.com/users/20792492/wiemanboy",
+			icon: "stackoverflow",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://www.instagram.com/wiemanboy/",
+			icon: "instagram",
+		},
+		{
+			username: "@wiemanboy",
+			url: "https://x.com/wiemanboy",
+			icon: "twitter",
+		},
+		{
+			username: "wiemanboy",
+			url: "https://steamcommunity.com/id/wiemanboy/",
+			icon: "steam",
+		},
+		{
+			username: "u/wiemanboy",
+			url: "https://www.reddit.com/user/wiemanboy/",
+			icon: "reddit",
+		},
+		{
+			username: "r/jarno",
+			url: "https://www.reddit.com/r/Jarno/",
+			icon: "reddit",
+		},
+	];
 </script>
 
 <div {...$$restProps}>
@@ -54,8 +99,9 @@ Profile
 					width="{300}"
 				/>
 			</div>
-			<div class="flex flex-grow flex-col">
+			<div class="flex flex-grow flex-col gap-5">
 				<SkillsList {skills} />
+				<SocialList {socials} />
 			</div>
 		</div>
 	</div>

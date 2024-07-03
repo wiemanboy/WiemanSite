@@ -17,9 +17,12 @@
         "test:coverage": "vitest --coverage"
     },
     "devDependencies": {
+        "@iconify-json/devicon": "^1.1.45",
         "@iconify-json/ic": "^1.1.17",
+        "@iconify-json/line-md": "^1.1.38",
         "@iconify-json/logos": "^1.1.42",
         "@iconify-json/mdi": "^1.1.66",
+        "@iconify-json/ri": "^1.1.21",
         "@playwright/test": "^1.28.1",
         "@rollup/plugin-json": "^6.1.0",
         "@sveltejs/adapter-auto": "^3.0.0",
