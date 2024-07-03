@@ -1,15 +1,19 @@
 {
     "language": "Nederlands",
-    "underConstruction": "Dit onderdeel is nog in ontwikkeling",
     "sourceCode": {
         "linkToMessage": "Neem een kijkje achter de schermen"
     },
-    "quotes": {
-        "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
-        "loading": "Quote ophalen...",
-        "error": "Er is iets misgegaan bij het ophalen van uw quote"
+    "page": {
+        "home": {
+            "title": "Welkom op mijn website"
+        }
     },
-    "home": {
-        "title": "Welkom op mijn website"
+    "component": {
+        "underConstruction": "Dit onderdeel is nog in ontwikkeling",
+        "quotes": {
+            "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
+            "loading": "Quote ophalen...",
+            "error": "Er is iets misgegaan bij het ophalen van uw quote"
+        }
     }
 }

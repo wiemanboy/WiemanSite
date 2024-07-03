@@ -1,15 +1,30 @@
 {
     "language": "English",
-    "underConstruction": "This part is under construction",
     "sourceCode": {
         "linkToMessage": "Take a peek behind the scenes"
     },
-    "quotes": {
-        "message": "In the meantime, here is a random quotes to keep you entertained",
-        "loading": "Getting quote...",
-        "error": "Something went wrong while getting your quote"
+    "page": {
+        "home": {
+            "title": "Welcome to my website"
+        }
     },
-    "home": {
-        "title": "Welcome to my website"
+    "component": {
+        "underConstruction": "This part is under construction",
+        "quotes": {
+            "message": "In the meantime, here is a random quotes to keep you entertained",
+            "loading": "Getting quote...",
+            "error": "Something went wrong while getting your quote"
+        },
+        "profile": {
+            "profileBanner": {
+                "introduction": "Hello, my name is",
+                "skills": {
+                    "title": "These are some of the skills i poses"
+                },
+                "socials": {
+                    "title": "Where to find me"
+                }
+            }
+        }
     }
 }
