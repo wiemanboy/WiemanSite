@@ -19,7 +19,13 @@
             "profile": {
                 "introduction": "Hallo, ik ben",
                 "skills": {
-                    "title": "Hier zijn enkele van mijn vaardigheden"
+                    "title": "Hier zijn enkele van mijn vaardigheden",
+                    "section": {
+                        "programmingLanguages": "Programmeer Talen",
+                        "frameworks": "Frameworks",
+                        "tools": "Tooling",
+                        "concepts": "Concepten"
+                    }
                 },
                 "socials": {
                     "title": "Waar je me kunt vinden"

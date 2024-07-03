@@ -25,6 +25,14 @@ export default {
 					DEFAULT: "#333",
 				},
 			},
+			tertiary: {
+				light: {
+					DEFAULT: "#ccc",
+				},
+				dark: {
+					DEFAULT: "#111",
+				},
+			},
 		},
 	},
 	plugins: [],

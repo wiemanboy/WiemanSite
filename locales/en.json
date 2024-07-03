@@ -18,7 +18,13 @@
         "profile": {
             "introduction": "Hello, my name is",
             "skills": {
-                "title": "These are some of the skills i poses"
+                "title": "These are some of the skills i posses",
+                "section": {
+                    "programmingLanguages": "Programming Languages",
+                    "frameworks": "Frameworks",
+                    "tools": "Tools",
+                    "concepts": "Concepts"
+                }
             },
             "socials": {
                 "title": "Where to find me"
