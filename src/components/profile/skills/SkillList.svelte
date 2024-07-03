@@ -17,7 +17,7 @@ Skills are grouped by sections.
 		skills: SkillSectionDto[];
 	}
 
-	export let skills: SkillSectionDto[];
+	export let skills: $$Props["skills"];
 
 </script>
 

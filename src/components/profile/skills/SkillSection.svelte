@@ -14,7 +14,7 @@ It includes a title and a list of skills.
 		skillSection: SkillSectionDto;
 	}
 
-	export let skillSection: SkillSectionDto;
+	export let skillSection: $$Props["skillSection"];
 </script>
 
 <div>

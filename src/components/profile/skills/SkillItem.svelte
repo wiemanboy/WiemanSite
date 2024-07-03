@@ -11,7 +11,7 @@ Simple component to display a skill in the SkillSection component.
 		skill: string;
 	}
 
-	export let skill: string;
+	export let skill: $$Props["skill"];
 </script>
 
 

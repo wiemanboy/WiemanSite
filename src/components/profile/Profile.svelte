@@ -7,79 +7,22 @@ Profile
 	import { Image } from "@unpic/svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
+	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
+	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 	import SkillsList from "./skills/SkillList.svelte";
 	import SocialList from "./socials/SocialList.svelte";
-
 
 	const tBase = "component.profile.";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		name: string;
+		skills: SkillSectionDto[];
+		socials: SocialDto[];
 	}
 
-	export let name: string;
-
-	const skills = [
-		{
-			title: $t(tBase + "skills.section.programmingLanguages"),
-			skills: ["Java", "C#", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
-		},
-		{
-			title: $t(tBase + "skills.section.frameworks"),
-			skills: ["Spring boot", "ASP.NET Core", "Laravel", "Svelte", "SvelteKit", "React.js", "Next.js", "Vue.js", "Nuxt.js"],
-		},
-		{
-			title: $t(tBase + "skills.section.tools"),
-			skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Figma"],
-		},
-		{
-			title: $t(tBase + "skills.section.concepts"),
-			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile"],
-		},
-	];
-
-	const socials = [
-		{
-			username: "wiemanboy",
-			url: "https://github.com/wiemanboy",
-			icon: "github",
-		},
-		{
-			username: "Jarno Wieman",
-			url: "https://www.linkedin.com/in/jarnowieman/",
-			icon: "linkedin",
-		},
-		{
-			username: "wiemanboy",
-			url: "https://stackoverflow.com/users/20792492/wiemanboy",
-			icon: "stackoverflow",
-		},
-		{
-			username: "wiemanboy",
-			url: "https://www.instagram.com/wiemanboy/",
-			icon: "instagram",
-		},
-		{
-			username: "@wiemanboy",
-			url: "https://x.com/wiemanboy",
-			icon: "twitter",
-		},
-		{
-			username: "wiemanboy",
-			url: "https://steamcommunity.com/id/wiemanboy/",
-			icon: "steam",
-		},
-		{
-			username: "u/wiemanboy",
-			url: "https://www.reddit.com/user/wiemanboy/",
-			icon: "reddit",
-		},
-		{
-			username: "r/jarno",
-			url: "https://www.reddit.com/r/Jarno/",
-			icon: "reddit",
-		},
-	];
+	export let name: $$Props["name"];
+	export let skills: $$Props["skills"];
+	export let socials: $$Props["socials"];
 </script>
 
 <div {...$$restProps}>
