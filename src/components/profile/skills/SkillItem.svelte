@@ -15,4 +15,4 @@ Simple component to display a skill in the SkillSection component.
 </script>
 
 
-<div class="p-1 rounded text-sm font-semibold card-themed">{skill}</div>
+<div class="p-1 rounded text-sm font-semibold card-themed text-nowrap">{skill}</div>
