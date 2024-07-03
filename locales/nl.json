@@ -5,7 +5,8 @@
     },
     "page": {
         "home": {
-            "title": "Welkom op mijn website"
+            "title": "Welkom op mijn website",
+            "devMessage": "Voel je vrij om onderdelen van mijn website te gebruiken voor je eigen projecten. Je kunt de broncode vinden op mijn"
         }
     },
     "component": {
@@ -16,7 +17,7 @@
             "error": "Er is iets misgegaan bij het ophalen van uw quote"
         },
         "profile": {
-            "introduction": "Hallo, mijn naam is",
+            "introduction": "Hallo {from}, mijn naam is",
             "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen.",
             "profilePictureAlt": "Een zeer mooie foto van mijzelf",
             "skills": {

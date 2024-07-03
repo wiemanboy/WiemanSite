@@ -17,26 +17,31 @@ Profile
 		name: string;
 		skills: SkillSectionDto[];
 		socials: SocialDto[];
+		extraMessage: string | undefined;
 	}
 
 	export let name: $$Props["name"];
 	export let skills: $$Props["skills"];
 	export let socials: $$Props["socials"];
+	export let extraMessage: $$Props["extraMessage"];
 </script>
 
 <div {...$$restProps}>
 	<div class="p-2">
 		<div class="text-3xl font-extrabold">
-			<div>{$t(tBase + "introduction")}</div>
+			<div>{$t(tBase + "introduction", { values: { from: extraMessage } })}</div>
 			<div>{name}</div>
 		</div>
 		<div class="flex flex-col md:flex-row-reverse mt-5 gap-3">
 			<div class="flex justify-end min-w-72">
-				<slot />
+				<slot name="image" />
 			</div>
 			<div class="flex flex-grow flex-col gap-5">
 				<div>
 					{$t(tBase + "description")}
+				</div>
+				<div>
+					<slot name="extraSection" />
 				</div>
 				<SkillsList {skills} />
 				<SocialList {socials} />

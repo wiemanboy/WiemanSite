@@ -5,7 +5,8 @@
     },
     "page": {
         "home": {
-            "title": "Welcome to my website"
+            "title": "Welcome to my website",
+            "devMessage": "Feel free to use any components of my website for your own projects. You can find the source code on my"
         }
     },
     "component": {
@@ -16,7 +17,7 @@
             "error": "Something went wrong while getting your quote"
         },
         "profile": {
-            "introduction": "Hello, my name is",
+            "introduction": "Hello {from}, my name is",
             "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games.",
             "profilePictureAlt": "A very lovely picture of me",
             "skills": {
