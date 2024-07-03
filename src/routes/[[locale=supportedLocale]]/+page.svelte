@@ -70,7 +70,7 @@
 	];
 </script>
 
-<main class="flex flex-grow flex-col h-screen">
+<main class="flex flex-grow flex-col">
 	<Profile class="m-3" name="Jarno Wieman" {skills} {socials}>
 		<Image
 			alt="{$t('component.profile.profilePictureAlt')}"
