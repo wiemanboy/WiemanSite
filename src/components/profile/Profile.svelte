@@ -1,5 +1,5 @@
 <!--
-ProfileBanner
+Profile
 
 -->
 
@@ -8,7 +8,7 @@ ProfileBanner
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 
-	const tBase = "component.profile.profileBanner.";
+	const tBase = "component.profile.";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		name: string;

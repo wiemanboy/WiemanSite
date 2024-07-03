@@ -14,6 +14,17 @@
             "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
             "loading": "Quote ophalen...",
             "error": "Er is iets misgegaan bij het ophalen van uw quote"
+        },
+        "profile": {
+            "profile": {
+                "introduction": "Hallo, ik ben",
+                "skills": {
+                    "title": "Hier zijn enkele van mijn vaardigheden"
+                },
+                "socials": {
+                    "title": "Waar je me kunt vinden"
+                }
+            }
         }
     }
 }

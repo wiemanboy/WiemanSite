@@ -16,14 +16,12 @@
             "error": "Something went wrong while getting your quote"
         },
         "profile": {
-            "profileBanner": {
-                "introduction": "Hello, my name is",
-                "skills": {
-                    "title": "These are some of the skills i poses"
-                },
-                "socials": {
-                    "title": "Where to find me"
-                }
+            "introduction": "Hello, my name is",
+            "skills": {
+                "title": "These are some of the skills i poses"
+            },
+            "socials": {
+                "title": "Where to find me"
             }
         }
     }
