@@ -4,7 +4,6 @@ Profile
 -->
 
 <script lang="ts">
-	import { Image } from "@unpic/svelte";
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
@@ -33,14 +32,7 @@ Profile
 		</div>
 		<div class="flex flex-col md:flex-row-reverse mt-5 gap-3">
 			<div class="flex justify-end min-w-72">
-				<Image
-					alt="{$t(tBase + 'profilePictureAlt')}"
-					class="rounded"
-					height="{350}"
-					layout="fixed"
-					src="https://jarnowieman.nl/assets/profile_picture.png"
-					width="{300}"
-				/>
+				<slot />
 			</div>
 			<div class="flex flex-grow flex-col gap-5">
 				<div>

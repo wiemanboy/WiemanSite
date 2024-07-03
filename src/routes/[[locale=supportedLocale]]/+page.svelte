@@ -1,6 +1,7 @@
 <!-- Home page -->
 
 <script lang="ts">
+	import { Image } from "@unpic/svelte";
 	import { t } from "svelte-i18n";
 	import Profile from "../../components/profile/Profile.svelte";
 
@@ -70,7 +71,16 @@
 </script>
 
 <main class="flex flex-grow flex-col h-screen">
-	<Profile class="m-3" name="Jarno Wieman" {skills} {socials} />
+	<Profile class="m-3" name="Jarno Wieman" {skills} {socials}>
+		<Image
+			alt="{$t('component.profile.profilePictureAlt')}"
+			class="rounded"
+			height="{350}"
+			layout="fixed"
+			src="https://jarnowieman.nl/assets/profile_picture.png"
+			width="{300}"
+		/>
+	</Profile>
 </main>
 
 <svelte:head>
