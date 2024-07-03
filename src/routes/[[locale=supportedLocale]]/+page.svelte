@@ -3,6 +3,8 @@
 <script lang="ts">
 	import { Image } from "@unpic/svelte";
 	import { t } from "svelte-i18n";
+	import { page } from "$app/stores";
+	import Link from "../../components/Link.svelte";
 	import Profile from "../../components/profile/Profile.svelte";
 
 	const tBase = "page.home.";
@@ -68,15 +70,25 @@
 			icon: "reddit",
 		},
 	];
+
+	const ref = $page.url.searchParams.get("ref");
 </script>
 
 <main class="flex flex-grow flex-col">
-	<Profile class="m-3" name="Jarno Wieman" {skills} {socials}>
+	<Profile class="m-3" extraMessage="{ref ? ref + ' browser' : '' }" name="Jarno Wieman" {skills} {socials}>
+		<svelte:fragment slot="extraSection">
+			{#if ref && /git|svelte|dev/.test(ref)}
+				{$t(tBase + "devMessage")}
+				<Link to="https://github.com/wiemanboy/WiemanSite">GitHub</Link>
+				.
+			{/if}
+		</svelte:fragment>
 		<Image
 			alt="{$t('component.profile.profilePictureAlt')}"
 			class="rounded"
 			height="{350}"
 			layout="fixed"
+			slot="image"
 			src="https://jarnowieman.nl/assets/profile_picture.png"
 			width="{300}"
 		/>
