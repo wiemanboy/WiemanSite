@@ -4,6 +4,7 @@
 	import { Image } from "@unpic/svelte";
 	import { t } from "svelte-i18n";
 	import { page } from "$app/stores";
+	import { PUBLIC_IMAGE_BASE_URL } from "$env/static/public";
 	import Link from "../../components/Link.svelte";
 	import Profile from "../../components/profile/Profile.svelte";
 
@@ -89,7 +90,7 @@
 			height="{350}"
 			layout="fixed"
 			slot="image"
-			src="https://jarnowieman.nl/assets/profile_picture.png"
+			src="{PUBLIC_IMAGE_BASE_URL}/profile_picture.png"
 			width="{300}"
 		/>
 	</Profile>
