@@ -94,6 +94,11 @@
 			width="{300}"
 		/>
 	</Profile>
+	<div class="block  sm:hidden md:hidden lg:hidden xl:hidden invisible">al</div>
+	<div class="hidden sm:block  md:hidden lg:hidden xl:hidden invisible">sm</div>
+	<div class="hidden sm:hidden md:block  lg:hidden xl:hidden invisible">md</div>
+	<div class="hidden sm:hidden md:hidden lg:block  xl:hidden invisible">lg</div>
+	<div class="hidden sm:hidden md:hidden lg:hidden xl:block invisible">xl</div>
 </main>
 
 <svelte:head>
