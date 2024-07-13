@@ -86,7 +86,7 @@
 		<Image
 			alt="{$t('component.profile.profilePictureAlt')}"
 			height="{350}"
-			key="profile_picture.png"
+			key="profile_picture"
 			slot="image"
 			width="{300}"
 		/>
