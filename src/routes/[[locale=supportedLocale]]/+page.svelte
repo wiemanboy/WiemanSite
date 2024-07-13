@@ -1,9 +1,9 @@
 <!-- Home page -->
 
 <script lang="ts">
-	import { Image } from "@unpic/svelte";
 	import { t } from "svelte-i18n";
 	import { page } from "$app/stores";
+	import Image from "../../components/Image.svelte";
 	import Link from "../../components/Link.svelte";
 	import Profile from "../../components/profile/Profile.svelte";
 
@@ -85,11 +85,9 @@
 		</svelte:fragment>
 		<Image
 			alt="{$t('component.profile.profilePictureAlt')}"
-			class="rounded"
 			height="{350}"
-			layout="fixed"
+			key="profile_picture.png"
 			slot="image"
-			src="https://jarnowieman.nl/assets/profile_picture.png"
 			width="{300}"
 		/>
 	</Profile>
