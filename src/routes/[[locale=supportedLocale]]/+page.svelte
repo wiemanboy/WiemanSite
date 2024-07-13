@@ -1,10 +1,9 @@
 <!-- Home page -->
 
 <script lang="ts">
-	import { Image } from "@unpic/svelte";
 	import { t } from "svelte-i18n";
 	import { page } from "$app/stores";
-	import { PUBLIC_IMAGE_BASE_URL } from "$env/static/public";
+	import Image from "../../components/Image.svelte";
 	import Link from "../../components/Link.svelte";
 	import Profile from "../../components/profile/Profile.svelte";
 
@@ -86,19 +85,12 @@
 		</svelte:fragment>
 		<Image
 			alt="{$t('component.profile.profilePictureAlt')}"
-			class="rounded"
 			height="{350}"
-			layout="fixed"
+			key="profile_picture.png"
 			slot="image"
-			src="{PUBLIC_IMAGE_BASE_URL}/profile_picture.png"
 			width="{300}"
 		/>
 	</Profile>
-	<div class="block  sm:hidden md:hidden lg:hidden xl:hidden invisible">al</div>
-	<div class="hidden sm:block  md:hidden lg:hidden xl:hidden invisible">sm</div>
-	<div class="hidden sm:hidden md:block  lg:hidden xl:hidden invisible">md</div>
-	<div class="hidden sm:hidden md:hidden lg:block  xl:hidden invisible">lg</div>
-	<div class="hidden sm:hidden md:hidden lg:hidden xl:block invisible">xl</div>
 </main>
 
 <svelte:head>
