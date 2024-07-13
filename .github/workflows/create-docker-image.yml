@@ -28,6 +28,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ vars.DOCKER_IMAGE_NAME }}:latest
-          build-args:
-              "PUBLIC_API_BASE_URL=${{ vars.PUBLIC_API_BASE_URL }}"
-                "PUBLIC_IMAGE_BASE_URL=${{ vars.PUBLIC_IMAGE_BASE_URL }}"
+          build-args: |
+            "PUBLIC_API_BASE_URL=${{ vars.PUBLIC_API_BASE_URL }}"
+            "PUBLIC_IMAGE_BASE_URL=${{ vars.PUBLIC_IMAGE_BASE_URL }}"
