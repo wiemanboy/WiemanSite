@@ -94,6 +94,6 @@
 </main>
 
 <svelte:head>
-	<title>{$t(tBase + "title")}</title>
+	<title>{$t(tBase + "title", { default: "Home" })}</title>
 </svelte:head>
 

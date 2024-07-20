@@ -1,37 +1,37 @@
 {
-    "language": "English",
-    "sourceCode": {
-        "linkToMessage": "Take a peek behind the scenes"
-    },
-    "page": {
-        "home": {
-            "title": "Welcome to my website",
-            "devMessage": "Feel free to use any components of my website for your own projects. You can find the source code on my"
-        }
-    },
     "component": {
-        "underConstruction": "This part is under construction",
-        "quotes": {
-            "message": "In the meantime, here is a random quotes to keep you entertained",
-            "loading": "Getting quote...",
-            "error": "Something went wrong while getting your quote"
-        },
         "profile": {
-            "introduction": "Hello {from}, my name is",
             "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games.",
+            "introduction": "Hello {from}, my name is",
             "profilePictureAlt": "A very lovely picture of me",
             "skills": {
-                "title": "These are some of the skills i posses",
                 "section": {
-                    "programmingLanguages": "Programming Languages",
+                    "concepts": "Concepts",
                     "frameworks": "Frameworks",
-                    "tools": "Tools",
-                    "concepts": "Concepts"
-                }
+                    "programmingLanguages": "Programming Languages",
+                    "tools": "Tools"
+                },
+                "title": "These are some of the skills i posses"
             },
             "socials": {
                 "title": "Where to find me"
             }
+        },
+        "quotes": {
+            "error": "Something went wrong while getting your quote",
+            "loading": "Getting quote...",
+            "message": "In the meantime, here is a random quotes to keep you entertained"
+        },
+        "underConstruction": "This part is under construction"
+    },
+    "language": "English",
+    "page": {
+        "home": {
+            "devMessage": "Feel free to use any components of my website for your own projects. You can find the source code on my",
+            "title": "Welcome to my website"
         }
+    },
+    "sourceCode": {
+        "linkToMessage": "Take a peek behind the scenes"
     }
 }

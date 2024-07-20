@@ -1,37 +1,37 @@
 {
-    "language": "Nederlands",
-    "sourceCode": {
-        "linkToMessage": "Neem een kijkje achter de schermen"
-    },
-    "page": {
-        "home": {
-            "title": "Welkom op mijn website",
-            "devMessage": "Voel je vrij om onderdelen van mijn website te gebruiken voor je eigen projecten. Je kunt de broncode vinden op mijn"
-        }
-    },
     "component": {
-        "underConstruction": "Dit onderdeel is nog in ontwikkeling",
-        "quotes": {
-            "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken",
-            "loading": "Quote ophalen...",
-            "error": "Er is iets misgegaan bij het ophalen van uw quote"
-        },
         "profile": {
-            "introduction": "Hallo {from}, mijn naam is",
             "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen.",
+            "introduction": "Hallo {from}, mijn naam is",
             "profilePictureAlt": "Een zeer mooie foto van mijzelf",
             "skills": {
-                "title": "Hier zijn een aantal van mijn vaardigheden",
                 "section": {
-                    "programmingLanguages": "Programmeer Talen",
+                    "concepts": "Concepten",
                     "frameworks": "Frameworks",
-                    "tools": "Tooling",
-                    "concepts": "Concepten"
-                }
+                    "programmingLanguages": "Programmeer Talen",
+                    "tools": "Tooling"
+                },
+                "title": "Hier zijn een aantal van mijn vaardigheden"
             },
             "socials": {
                 "title": "Waar je me kunt vinden"
             }
+        },
+        "quotes": {
+            "error": "Er is iets misgegaan bij het ophalen van uw quote",
+            "loading": "Quote ophalen...",
+            "message": "In de tussentijd is hier een willekeurige quote om je mee te vermaken"
+        },
+        "underConstruction": "Dit onderdeel is nog in ontwikkeling"
+    },
+    "language": "Nederlands",
+    "page": {
+        "home": {
+            "devMessage": "Voel je vrij om onderdelen van mijn website te gebruiken voor je eigen projecten. Je kunt de broncode vinden op mijn",
+            "title": "Welkom op mijn website"
         }
+    },
+    "sourceCode": {
+        "linkToMessage": "Neem een kijkje achter de schermen"
     }
 }
