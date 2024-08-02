@@ -12,19 +12,19 @@
 	const skills = [
 		{
 			title: $t("component.profile.skills.section.programmingLanguages"),
-			skills: ["Java", "C#", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
+			skills: ["Java", "C#", "Golang", "Bash", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
 		},
 		{
 			title: $t("component.profile.skills.section.frameworks"),
-			skills: ["Spring boot", "ASP.NET Core", "Laravel", "Svelte", "SvelteKit", "React.js", "Next.js", "Vue.js", "Nuxt.js"],
+			skills: ["Spring boot", "ASP.NET Core", "Gin", "Laravel", "Svelte", "SvelteKit", "React.js", "Next.js", "Vue.js", "Nuxt.js"],
 		},
 		{
 			title: $t("component.profile.skills.section.tools"),
-			skills: ["Git", "GitHub", "GitHub Actions", "Docker", "Figma"],
+			skills: ["Docker", "Docker Swarm", "Git", "GitHub", "GitHub Actions", "Figma"],
 		},
 		{
 			title: $t("component.profile.skills.section.concepts"),
-			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile"],
+			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile", "Observability"],
 		},
 	];
 

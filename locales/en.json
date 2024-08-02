@@ -1,8 +1,8 @@
 {
     "component": {
         "profile": {
-            "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games.",
-            "introduction": "Hello {from}, my name is",
+            "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games. Feel free to look around and see what I am capable of or check out my socials to see what else I get up to.",
+            "introduction": "Hello{from}, my name is",
             "profilePictureAlt": "A very lovely picture of me",
             "skills": {
                 "section": {

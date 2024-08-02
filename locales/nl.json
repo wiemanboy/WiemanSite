@@ -1,8 +1,8 @@
 {
     "component": {
         "profile": {
-            "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen.",
-            "introduction": "Hallo {from}, mijn naam is",
+            "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen. Kijk eens rond en zie wat ik allemaal kan of kijk op mijn socials om te zien wat ik nog meer allemaal doe.",
+            "introduction": "Hallo{from}, mijn naam is",
             "profilePictureAlt": "Een zeer mooie foto van mijzelf",
             "skills": {
                 "section": {
