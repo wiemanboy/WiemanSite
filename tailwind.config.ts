@@ -5,7 +5,6 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				white: "#fff",
 				link: {
 					DEFAULT: "#0070f3",
 					hover: "#0366d6",
@@ -28,10 +27,18 @@ export default {
 				},
 				tertiary: {
 					light: {
-						DEFAULT: "#ccc",
+						DEFAULT: "#eee",
 					},
 					dark: {
 						DEFAULT: "#111",
+					},
+				},
+				subtle: {
+					light: {
+						DEFAULT: "#697979",
+					},
+					dark: {
+						DEFAULT: "#9c9c9c",
 					},
 				},
 			},
