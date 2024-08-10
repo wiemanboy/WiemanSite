@@ -31,9 +31,10 @@ Skills are grouped by sections.
 	 use:inview={{unobserveOnEnter: true}}
 >
 	<div class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</div>
-	<ul class="flex flex-col lg:flex-row gap-5 mt-5">
+	<div class="hidden animate-[popIn]"></div>
+	<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
 		{#each skills as skillSection, index}
-			<li style={inView ? `animation: fadeIn 1s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>
+			<li style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>
 				<SkillSection {skillSection} />
 			</li>
 		{/each}

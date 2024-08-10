@@ -39,10 +39,11 @@ SocialList
 	 use:inview={{unobserveOnEnter: true}}
 >
 	<div class="text-3xl md:text-6xl font-bold">{$t("profile.socials.title")}:</div>
+	<div class="hidden animate-[popIn]"></div>
 	<ul class="flex flex-row flex-wrap max-w-[740px] mt-5">
 		{#each socials as social, index}
 			<li class=" basis-1/2 sm:basis-1/3 lg:basis-1/4"
-				style={inView ? `animation: fadeIn 1s ease-in-out ${index * 0.1 + 0.5}s backwards;` : ''}
+				style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.1 + 0.5}s backwards;` : ''}
 			>
 				<SocialItem {social}>
 					{#if social.icon === "github"}

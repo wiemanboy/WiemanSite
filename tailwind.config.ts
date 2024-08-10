@@ -67,14 +67,6 @@ export default {
 					transform: "rotate(5deg)",
 				},
 			},
-			popout: {
-				"0%, 100%": {
-					transform: "scale(1)",
-				},
-				"50%": {
-					transform: "scale(1.5)",
-				},
-			},
 			popoutWiggle: {
 				"0%, 100%": {
 					transform: "scale(1) rotate(-5deg)",
@@ -84,6 +76,16 @@ export default {
 				},
 				"50%": {
 					transform: "scale(1.5) rotate(-5deg)",
+				},
+			},
+			popIn: {
+				"0%": {
+					opacity: "0",
+					transform: "translateY(50%)",
+				},
+				"100%": {
+					opacity: "1",
+					transform: "translateY(0)",
 				},
 			},
 		},
