@@ -10,6 +10,7 @@ Skills are grouped by sections.
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
+	import Hidden from "../../Hidden.svelte";
 	import SkillSection from "./SkillSection.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
@@ -30,8 +31,10 @@ Skills are grouped by sections.
 	 on:inview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
-	<div class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</div>
+	<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</h2>
 	<div class="hidden animate-[popIn]"></div>
+	<Hidden>{$t("profile.skills.items.jarno") + ":"}</Hidden>
+	<Hidden>{$t("profile.skills.items.wiemanboy") + ":"}</Hidden>
 	<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
 		{#each skills as skillSection, index}
 			<li style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>

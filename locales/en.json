@@ -3,7 +3,7 @@
     "page": {
         "home": {
             "devMessage": "Feel free to use any components of my website for your own projects. You can find the source code on my",
-            "title": "Welcome to my website"
+            "title": "Jarno Wieman"
         }
     },
     "profile": {
@@ -11,10 +11,19 @@
             "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games. Feel free to look around and see what I am capable of or check out my socials to see what else I get up to.",
             "hello": "Hello",
             "introduction": "my name is",
-            "profilePictureAlt": "A very lovely picture of me",
-            "who": "Who am I"
+            "profilePictureAlt": "A very lovely picture of me, Jarno Wieman",
+            "subtitle": "Welcome to my website",
+            "who": {
+                "i": "Who am I",
+                "jarno": "Who is Jarno Wieman",
+                "wiemanboy": "Who is wiemanboy"
+            }
         },
         "skills": {
+            "items": {
+                "jarno": "What skills does Jarno Wieman posses",
+                "wiemanboy": "What skills does wiemanboy posses"
+            },
             "section": {
                 "concepts": "Concepts",
                 "frameworks": "Frameworks",
@@ -24,6 +33,10 @@
             "title": "These are some of the skills i posses"
         },
         "socials": {
+            "links": {
+                "jarno": "Jarno Wieman social media links",
+                "wiemanboy": "Wiemanboy social media links"
+            },
             "title": "Where to find me"
         }
     },

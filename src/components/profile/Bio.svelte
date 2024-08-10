@@ -5,7 +5,9 @@ Profile
 
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
+	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
+	import Hidden from "../Hidden.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		title: string;
@@ -28,11 +30,13 @@ Profile
 		on:inview_change={handleChange}
 		use:inview={{unobserveOnEnter: true}}
 	>
-		<div class="text-3xl md:text-6xl font-extrabold">
+		<h2 class="text-3xl md:text-6xl font-extrabold">
 			<span class="inline-block">{title}</span>
 			<span
 				class="inline-block -ml-1 md:-ml-3 {inView ? 'animate-[popoutWiggle_0.5s_ease-in-out_1s]' : ''}">?</span>
-		</div>
+		</h2>
+		<Hidden>{$t("profile.bio.who.jarno") + ":"}</Hidden>
+		<Hidden>{$t("profile.bio.who.wiemanboy") + ":"}</Hidden>
 		<div class="flex flex-col md:flex-row-reverse mt-5 gap-3">
 			<div class="flex justify-end min-w-72">
 				<slot name="image" />

@@ -23,18 +23,22 @@ Header
 
 <div {...$$restProps}>
 	<div
+		class="flex flex-col"
 		class:animate-fadein={inView}
 		on:inview_change={handleChange}
 		use:inview={{unobserveOnEnter: true}}
 	>
-		<div class="text-4xl md:text-7xl lg:text-8xl font-extrabold"
-			 class:animate-fadein={inView}
+		<h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold"
+			class:animate-fadein={inView}
 		>
 			<span
 				class="inline-block {inView ? 'animate-[popoutWiggle_0.5s_ease-in-out_0.6s]' : ''}">{$t("profile.bio.hello")}</span>
 			<span class="inline-block -ml-3 md:-ml-5">, {$t("profile.bio.introduction")}</span>
-		</div>
+		</h1>
 		<div
-			class="text-3xl md:text-6xl lg-text=8xl font-extrabold {inView ? 'animate-[fromRight_0.3s_ease-in-out_0.3s_both]' : ''}">{name}</div>
+			class="text-3xl md:text-6xl lg-text=8xl font-extrabold {inView ? 'animate-[fromRight_0.3s_ease-in-out_0.3s_both]' : ''}">{name}
+		</div>
+		<small
+			class="text-lg md:text-2xl font-bold text-center flex grow justify-center mt-12 text-gray-500">{$t("profile.bio.subtitle")}</small>
 	</div>
 </div>

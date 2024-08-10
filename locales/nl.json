@@ -3,7 +3,7 @@
     "page": {
         "home": {
             "devMessage": "Voel je vrij om onderdelen van mijn website te gebruiken voor je eigen projecten. Je kunt de broncode vinden op mijn",
-            "title": "Welkom op mijn website"
+            "title": "Jarno Wieman"
         }
     },
     "profile": {
@@ -11,10 +11,19 @@
             "description": "Ik ben een software developer met een passie voor het creëren en leren van nieuwe dingen. Ik ben altijd op zoek naar nieuwe uitdagingen en mogelijkheden. Hiernaast hou ik van katten, choccy milk, mountainbiking, muziek en video games spelen. Kijk eens rond en zie wat ik allemaal kan of kijk op mijn socials om te zien wat ik nog meer allemaal doe.",
             "hello": "Hallo",
             "introduction": "mijn naam is",
-            "profilePictureAlt": "Een zeer mooie foto van mijzelf",
-            "who": "Wie ben ik"
+            "profilePictureAlt": "Een zeer mooie foto van mijzelf, Jarno Wieman",
+            "subtitle": "Welcome to my website",
+            "who": {
+                "i": "Wie ben ik",
+                "jarno": "Wie is Jarno Wieman",
+                "wiemanboy": "Wie is wiemanboy"
+            }
         },
         "skills": {
+            "items": {
+                "jarno": "Welke vaardigheden heeft Jarno Wieman",
+                "wiemanboy": "Welke vaardigheden heeft wiemanboy"
+            },
             "section": {
                 "concepts": "Concepten",
                 "frameworks": "Frameworks",
@@ -24,6 +33,10 @@
             "title": "Hier zijn een aantal van mijn vaardigheden"
         },
         "socials": {
+            "links": {
+                "jarno": "Jarno Wieman social media links",
+                "wiemanboy": "Wiemanboy social media links"
+            },
             "title": "Waar je me kunt vinden"
         }
     },
