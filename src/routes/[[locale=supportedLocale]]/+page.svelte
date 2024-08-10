@@ -72,13 +72,13 @@
 </script>
 
 <main class="flex flex-col mx-4 gap-2">
-	<div class="h-screen my-2 flex justify-center">
+	<div class="min-h-screen my-2 flex justify-center">
 		<div class="flex flex-col justify-center">
 			<ProfileHeader name="Jarno Wieman" />
 		</div>
 	</div>
 
-	<Bio class="h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
+	<Bio class="min-h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
 		<Image
 			alt="{$t('profile.bio.profilePictureAlt')}"
 			height="{350}"
@@ -88,8 +88,8 @@
 		/>
 	</Bio>
 
-	<SkillList {skills} />
-	<div class="h-screen flex flex-col justify-end mb-56">
+	<SkillList class="mt-56" {skills} />
+	<div class="min-h-screen flex flex-col justify-end mb-56">
 		<SocialList class="" {socials} />
 	</div>
 </main>
