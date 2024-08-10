@@ -34,6 +34,62 @@ export default {
 				},
 			},
 		},
+		keyframes: {
+			fadeIn: {
+				"0%": {
+					opacity: "0",
+				},
+				"100%": {
+					opacity: "1",
+				},
+			},
+			fromRight: {
+				"0%": {
+					transform: "translateX(5%)",
+				},
+				"100%": {
+					transform: "translateX(0)",
+				},
+			},
+			fromTop: {
+				"0%": {
+					transform: "translateY(-5%)",
+				},
+				"100%": {
+					transform: "translateY(0)",
+				},
+			},
+			wiggle: {
+				"0%, 100%": {
+					transform: "rotate(-5deg)",
+				},
+				"50%": {
+					transform: "rotate(5deg)",
+				},
+			},
+			popout: {
+				"0%, 100%": {
+					transform: "scale(1)",
+				},
+				"50%": {
+					transform: "scale(1.5)",
+				},
+			},
+			popoutWiggle: {
+				"0%, 100%": {
+					transform: "scale(1) rotate(-5deg)",
+				},
+				"25%, 75%": {
+					transform: "scale(1.5) rotate(5deg)",
+				},
+				"50%": {
+					transform: "scale(1.5) rotate(-5deg)",
+				},
+			},
+		},
+		animation: {
+			fadein: "fadeIn 0.7s ease-in-out",
+		},
 	},
 	plugins: [],
 } satisfies Config;

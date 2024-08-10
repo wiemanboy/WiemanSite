@@ -71,25 +71,35 @@
 	];
 </script>
 
-<main class="flex flex-grow flex-col mx-2">
-	<ProfileHeader class="h-screen" name="Jarno Wieman" />
+<main class="flex flex-col mx-4 gap-2">
+	<div class="h-screen my-2 flex justify-center">
+		<div class="flex flex-col justify-center">
+			<ProfileHeader name="Jarno Wieman" />
+		</div>
+	</div>
 
-	<Bio class="h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
-		<Image
-			alt="{$t('profile.bio.profilePictureAlt')}"
-			height="{350}"
-			key="profile_picture"
-			slot="image"
-			width="{300}"
-		/>
-	</Bio>
+	<div class="h-screen">
+		<Bio content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
+			<Image
+				alt="{$t('profile.bio.profilePictureAlt')}"
+				height="{350}"
+				key="profile_picture"
+				slot="image"
+				width="{300}"
+			/>
+		</Bio>
+	</div>
 
-	<SkillList class="h-screen" {skills} />
+	<div class="h-screen">
+		<SkillList {skills} />
+	</div>
 
-	<SocialList class="h-screen" {socials} />
+	<div class="h-screen">
+		<SocialList {socials} />
+	</div>
 </main>
 
 <svelte:head>
-	<title>{$t("title", { default: "Home" })}</title>
+	<title>{$t("page.home.title", { default: "Home" })}</title>
 </svelte:head>
 
