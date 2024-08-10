@@ -29,16 +29,18 @@ Profile
 		use:inview={{unobserveOnEnter: true}}
 	>
 		<div class="text-3xl md:text-6xl font-extrabold">
-			<div>{title}</div>
+			<span class="inline-block">{title}</span>
+			<span
+				class="inline-block -ml-1 md:-ml-3 {inView ? 'animate-[popoutWiggle_0.5s_ease-in-out_1s]' : ''}">?</span>
 		</div>
 		<div class="flex flex-col md:flex-row-reverse mt-5 gap-3">
 			<div class="flex justify-end min-w-72">
 				<slot name="image" />
 			</div>
 			<div class="flex flex-grow flex-col gap-5">
-				<div>
+				<p class="{inView ? 'animate-[popIn_0.5s_ease-in-out_0.3s_both]' : ''}">
 					{content}
-				</div>
+				</p>
 				<div>
 					<slot name="extraSection" />
 				</div>
