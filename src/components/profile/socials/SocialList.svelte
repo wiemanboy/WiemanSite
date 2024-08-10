@@ -16,9 +16,6 @@ SocialList
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 	import SocialItem from "./SocialItem.svelte";
 
-	const tBase = "component.profile.socials.";
-
-
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		socials: SocialDto[];
 	}
@@ -28,8 +25,8 @@ SocialList
 	const iconClass = "inline";
 </script>
 
-<div>
-	<div class="text-xl font-bold">{$t(tBase + "title")}:</div>
+<div {...$$restProps}>
+	<div class="text-xl font-bold">{$t("profile.socials.title")}:</div>
 	<ul class="flex flex-row flex-wrap max-w-[740px]">
 		{#each socials as social}
 			<li class=" basis-1/2 sm:basis-1/3 lg:basis-1/4">

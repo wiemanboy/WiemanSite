@@ -2,28 +2,27 @@
 
 <script lang="ts">
 	import { t } from "svelte-i18n";
-	import { page } from "$app/stores";
 	import Image from "../../components/Image.svelte";
-	import Link from "../../components/Link.svelte";
-	import Profile from "../../components/profile/Profile.svelte";
-
-	const tBase = "page.home.";
+	import Bio from "../../components/profile/Bio.svelte";
+	import ProfileHeader from "../../components/profile/ProfileHeader.svelte";
+	import SkillList from "../../components/profile/skills/SkillList.svelte";
+	import SocialList from "../../components/profile/socials/SocialList.svelte";
 
 	const skills = [
 		{
-			title: $t("component.profile.skills.section.programmingLanguages"),
+			title: $t("profile.skills.section.programmingLanguages"),
 			skills: ["Java", "C#", "Golang", "Bash", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
 		},
 		{
-			title: $t("component.profile.skills.section.frameworks"),
+			title: $t("profile.skills.section.frameworks"),
 			skills: ["Spring boot", "ASP.NET Core", "Gin", "Laravel", "Svelte", "SvelteKit", "React.js", "Next.js", "Vue.js", "Nuxt.js"],
 		},
 		{
-			title: $t("component.profile.skills.section.tools"),
-			skills: ["Docker", "Docker Swarm", "Git", "GitHub", "GitHub Actions", "Figma"],
+			title: $t("profile.skills.section.tools"),
+			skills: ["Docker", "Docker Swarm", "Git", "GitHub", "GitHub Actions", "Postman", "Swagger", "Figma"],
 		},
 		{
-			title: $t("component.profile.skills.section.concepts"),
+			title: $t("profile.skills.section.concepts"),
 			skills: ["SOLID", "Xtreme Programming", "CI/CD", "OOP", "TDD", "DDD", "REST", "SCRUM", "Agile", "Observability"],
 		},
 	];
@@ -70,30 +69,27 @@
 			icon: "reddit",
 		},
 	];
-
-	const ref = $page.url.searchParams.get("ref");
 </script>
 
-<main class="flex flex-grow flex-col">
-	<Profile class="m-3" extraMessage="{ref ? ref + ' browser' : '' }" name="Jarno Wieman" {skills} {socials}>
-		<svelte:fragment slot="extraSection">
-			{#if ref && /git|svelte|dev/.test(ref)}
-				{$t(tBase + "devMessage")}
-				<Link to="https://github.com/wiemanboy/WiemanSite">GitHub</Link>
-				.
-			{/if}
-		</svelte:fragment>
+<main class="flex flex-grow flex-col mx-2">
+	<ProfileHeader class="h-screen" name="Jarno Wieman" />
+
+	<Bio class="h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
 		<Image
-			alt="{$t('component.profile.profilePictureAlt')}"
+			alt="{$t('profile.bio.profilePictureAlt')}"
 			height="{350}"
 			key="profile_picture"
 			slot="image"
 			width="{300}"
 		/>
-	</Profile>
+	</Bio>
+
+	<SkillList class="h-screen" {skills} />
+
+	<SocialList class="h-screen" {socials} />
 </main>
 
 <svelte:head>
-	<title>{$t(tBase + "title", { default: "Home" })}</title>
+	<title>{$t("title", { default: "Home" })}</title>
 </svelte:head>
 

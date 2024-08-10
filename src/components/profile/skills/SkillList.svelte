@@ -11,8 +11,6 @@ Skills are grouped by sections.
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
 	import SkillSection from "./SkillSection.svelte";
 
-	const tBase = "component.profile.skills.";
-
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		skills: SkillSectionDto[];
 	}
@@ -21,8 +19,8 @@ Skills are grouped by sections.
 
 </script>
 
-<div>
-	<div class="text-xl font-bold">{$t(tBase + "title")}:</div>
+<div {...$$restProps}>
+	<div class="text-xl font-bold">{$t("profile.skills.title")}:</div>
 	<ul class="flex flex-col lg:flex-row gap-5">
 		{#each skills as skillSection}
 			<li>
