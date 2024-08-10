@@ -12,9 +12,18 @@
             "hello": "Hallo",
             "introduction": "mijn naam is",
             "profilePictureAlt": "Een zeer mooie foto van mijzelf, Jarno Wieman",
-            "who": "Wie ben ik"
+            "subtitle": "Welcome to my website",
+            "who": {
+                "i": "Wie ben ik",
+                "jarno": "Wie is Jarno Wieman",
+                "wiemanboy": "Wie is wiemanboy"
+            }
         },
         "skills": {
+            "items": {
+                "jarno": "Welke vaardigheden heeft Jarno Wieman",
+                "wiemanboy": "Welke vaardigheden heeft wiemanboy"
+            },
             "section": {
                 "concepts": "Concepten",
                 "frameworks": "Frameworks",
@@ -24,6 +33,10 @@
             "title": "Hier zijn een aantal van mijn vaardigheden"
         },
         "socials": {
+            "links": {
+                "jarno": "Jarno Wieman social media links",
+                "wiemanboy": "Wiemanboy social media links"
+            },
             "title": "Waar je me kunt vinden"
         }
     },

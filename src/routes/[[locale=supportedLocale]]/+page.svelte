@@ -78,7 +78,7 @@
 		</div>
 	</div>
 
-	<Bio class="min-h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
+	<Bio class="min-h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who.i')}">
 		<Image
 			alt="{$t('profile.bio.profilePictureAlt')}"
 			height="{350}"

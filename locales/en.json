@@ -12,9 +12,18 @@
             "hello": "Hello",
             "introduction": "my name is",
             "profilePictureAlt": "A very lovely picture of me, Jarno Wieman",
-            "who": "Who am I"
+            "subtitle": "Welcome to my website",
+            "who": {
+                "i": "Who am I",
+                "jarno": "Who is Jarno Wieman",
+                "wiemanboy": "Who is wiemanboy"
+            }
         },
         "skills": {
+            "items": {
+                "jarno": "What skills does Jarno Wieman posses",
+                "wiemanboy": "What skills does wiemanboy posses"
+            },
             "section": {
                 "concepts": "Concepts",
                 "frameworks": "Frameworks",
@@ -24,6 +33,10 @@
             "title": "These are some of the skills i posses"
         },
         "socials": {
+            "links": {
+                "jarno": "Jarno Wieman social media links",
+                "wiemanboy": "Wiemanboy social media links"
+            },
             "title": "Where to find me"
         }
     },
