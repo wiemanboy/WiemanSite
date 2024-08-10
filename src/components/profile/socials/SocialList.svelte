@@ -47,19 +47,19 @@ SocialList
 			>
 				<SocialItem {social}>
 					{#if social.icon === "github"}
-						<GitHubIcon class="{iconClass}" />
+						<GitHubIcon class="{iconClass}" aria-label="GitHub icon" />
 					{:else if social.icon === "linkedin"}
-						<LinkedinIcon class="{iconClass}" />
+						<LinkedinIcon class="{iconClass}" aria-label="Linkedin icon" />
 					{:else if (social.icon === "twitter")}
-						<TwitterIcon class="{iconClass}" />
+						<TwitterIcon class="{iconClass}" aria-label="Twitter/X icon" />
 					{:else if (social.icon === "instagram")}
-						<InstagramIcon class="{iconClass}" />
+						<InstagramIcon class="{iconClass}" aria-label="Instagram icon" />
 					{:else if (social.icon === "reddit")}
-						<RedditIcon class="{iconClass}" />
+						<RedditIcon class="{iconClass}" aria-label="Reddit icon" />
 					{:else if (social.icon === "steam")}
-						<SteamIcon class="{iconClass}" />
+						<SteamIcon class="{iconClass}" aria-label="Reddit icon" />
 					{:else if (social.icon === "stackoverflow")}
-						<StackoverflowIcon class="{iconClass}" />
+						<StackoverflowIcon class="{iconClass}" aria-label="Stackoverflow icon" />
 					{:else}
 						{social.icon}
 					{/if}
