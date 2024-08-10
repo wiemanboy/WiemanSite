@@ -78,24 +78,19 @@
 		</div>
 	</div>
 
-	<div class="h-screen">
-		<Bio content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
-			<Image
-				alt="{$t('profile.bio.profilePictureAlt')}"
-				height="{350}"
-				key="profile_picture"
-				slot="image"
-				width="{300}"
-			/>
-		</Bio>
-	</div>
+	<Bio class="h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who')}">
+		<Image
+			alt="{$t('profile.bio.profilePictureAlt')}"
+			height="{350}"
+			key="profile_picture"
+			slot="image"
+			width="{300}"
+		/>
+	</Bio>
 
-	<div class="h-screen">
-		<SkillList {skills} />
-	</div>
-
-	<div class="h-screen">
-		<SocialList {socials} />
+	<SkillList {skills} />
+	<div class="h-screen flex flex-col justify-end mb-56">
+		<SocialList class="" {socials} />
 	</div>
 </main>
 
