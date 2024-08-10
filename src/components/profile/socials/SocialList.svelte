@@ -38,7 +38,7 @@ SocialList
 	 on:inview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
-	<div class="text-3xl md:text-6xl font-bold">{$t("profile.socials.title")}:</div>
+	<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.socials.title")}:</h2>
 	<div class="hidden animate-[popIn]"></div>
 	<ul class="flex flex-row flex-wrap max-w-[740px] mt-5">
 		{#each socials as social, index}

@@ -30,7 +30,7 @@ Skills are grouped by sections.
 	 on:inview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
-	<div class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</div>
+	<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</h2>
 	<div class="hidden animate-[popIn]"></div>
 	<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
 		{#each skills as skillSection, index}
