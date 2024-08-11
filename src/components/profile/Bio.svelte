@@ -42,7 +42,7 @@ Profile
 				<slot name="image" />
 			</div>
 			<div class="flex flex-grow flex-col gap-5">
-				<p class="{inView ? 'animate-[popIn_0.5s_ease-in-out_0.3s_both]' : ''}">
+				<p class="{inView ? 'animate-[popIn_0.5s_ease-in-out_0.3s_both]' : ''} sm:text-xl">
 					{content}
 				</p>
 				<div>
