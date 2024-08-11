@@ -77,13 +77,13 @@ export default {
 				},
 				popoutWiggle: {
 					"0%, 100%": {
-						transform: "scale(1) rotate(-5deg)",
+						transform: "scale(1) rotate(0deg)",
 					},
 					"25%, 75%": {
-						transform: "scale(1.5) rotate(5deg)",
+						transform: "scale(1.2) rotate(-5deg)",
 					},
 					"50%": {
-						transform: "scale(1.5) rotate(-5deg)",
+						transform: "scale(1.2) rotate(5deg)",
 					},
 				},
 				popIn: {
