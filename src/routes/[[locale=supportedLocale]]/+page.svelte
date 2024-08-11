@@ -78,18 +78,22 @@
 		</div>
 	</div>
 
-	<Bio class="min-h-screen" content="{$t('profile.bio.description')}" title="{$t('profile.bio.who.i')}">
-		<Image
-			alt="{$t('profile.bio.profilePictureAlt')}"
-			height="{350}"
-			key="profile_picture"
-			slot="image"
-			width="{300}"
-		/>
-	</Bio>
+	<div class="min-h-screen flex flex-col justify-center">
+		<Bio content="{$t('profile.bio.description')}" title="{$t('profile.bio.who.i')}">
+			<Image
+				alt="{$t('profile.bio.profilePictureAlt')}"
+				height="{350}"
+				key="profile_picture"
+				slot="image"
+				width="{300}"
+			/>
+		</Bio>
+	</div>
 
-	<SkillList class="mt-56" {skills} />
-	<div class="flex justify-center">
+	<div class="min-h-screen flex flex-col justify-center">
+		<SkillList class="mt-56" {skills} />
+	</div>
+	<div class="flex justify-center mt-56">
 		<div class="min-h-screen flex flex-col justify-center">
 			<SocialList class="text-xl" {socials} />
 		</div>
