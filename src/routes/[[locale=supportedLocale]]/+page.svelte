@@ -89,8 +89,10 @@
 	</Bio>
 
 	<SkillList class="mt-56" {skills} />
-	<div class="min-h-screen flex flex-col justify-end mb-56">
-		<SocialList class="" {socials} />
+	<div class="flex justify-center">
+		<div class="min-h-screen flex flex-col justify-center">
+			<SocialList class="text-xl" {socials} />
+		</div>
 	</div>
 </main>
 
