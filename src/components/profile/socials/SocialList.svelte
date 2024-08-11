@@ -43,7 +43,7 @@ SocialList
 	<div class="hidden animate-[popIn]"></div>
 	<Hidden>{$t("profile.socials.links.jarno") + ":"}</Hidden>
 	<Hidden>{$t("profile.socials.links.wiemanboy") + ":"}</Hidden>
-	<ul class="flex flex-row flex-wrap max-w-[740px] mt-5">
+	<ul class="flex flex-row flex-wrap max-w-[740px] mt-5 text-sm sm:text-xl">
 		{#each socials as social, index}
 			<li class=" basis-1/2 sm:basis-1/3 lg:basis-1/4"
 				style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.1 + 0.5}s backwards;` : ''}
