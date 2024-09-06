@@ -94,9 +94,7 @@
 		<SkillList class="mt-56" {skills} />
 	</div>
 	<div class="flex justify-center mt-56">
-		<div class="min-h-screen flex flex-col justify-center">
-			<SocialList class="text-xl" {socials} />
-		</div>
+		<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
 	</div>
 </main>
 
