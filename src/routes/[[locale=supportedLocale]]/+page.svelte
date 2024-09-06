@@ -71,26 +71,28 @@
 	];
 </script>
 
-<main class="flex flex-col mx-auto gap-2 max-2 max-w-[1500px]">
-	<div class="min-h-screen my-2 flex justify-center">
-		<ProfileHeader class="flex flex-col justify-center" name="Jarno Wieman" />
-	</div>
+<main class="flex justify-center">
+	<div class="mx-4 flex flex-col gap-2 max-2 max-w-[1500px]">
+		<div class="min-h-screen my-2 flex justify-center">
+			<ProfileHeader class="flex flex-col justify-center" name="Jarno Wieman" />
+		</div>
 
-	<Bio class="min-h-screen flex flex-col justify-center" content="{$t('profile.bio.description')}"
-		 title="{$t('profile.bio.who.i')}">
-		<Image
-			alt="{$t('profile.bio.profilePictureAlt')}"
-			height="{350}"
-			key="profile_picture"
-			slot="image"
-			width="{300}"
-		/>
-	</Bio>
+		<Bio class="min-h-screen flex flex-col justify-center mt-32" content="{$t('profile.bio.description')}"
+			 title="{$t('profile.bio.who.i')}">
+			<Image
+				alt="{$t('profile.bio.profilePictureAlt')}"
+				height="{350}"
+				key="profile_picture"
+				slot="image"
+				width="{300}"
+			/>
+		</Bio>
 
-	<SkillList class="mt-56 min-h-screen flex flex-col justify-center" {skills} />
+		<SkillList class="mt-56 min-h-screen flex flex-col justify-center" {skills} />
 
-	<div class="flex justify-center mt-56">
-		<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
+		<div class="flex justify-center mt-56">
+			<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
+		</div>
 	</div>
 </main>
 
