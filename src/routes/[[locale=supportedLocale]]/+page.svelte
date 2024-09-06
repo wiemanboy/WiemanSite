@@ -2,13 +2,17 @@
 
 <script lang="ts">
 	import { t } from "svelte-i18n";
+	import type EmploymentDTO from "$lib/dtos/profile/employment/EmploymentDTO";
+	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
+	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 	import Image from "../../components/Image.svelte";
 	import Bio from "../../components/profile/Bio.svelte";
+	import EmploymentList from "../../components/profile/employment/EmploymentList.svelte";
 	import ProfileHeader from "../../components/profile/ProfileHeader.svelte";
 	import SkillList from "../../components/profile/skills/SkillList.svelte";
 	import SocialList from "../../components/profile/socials/SocialList.svelte";
 
-	const skills = [
+	const skills: SkillSectionDto[] = [
 		{
 			title: $t("profile.skills.section.programmingLanguages"),
 			skills: ["Java", "C#", "Golang", "Bash", "Python", "JavaScript", "TypeScript", "php", "html", "css", "scss", "sass"],
@@ -27,7 +31,26 @@
 		},
 	];
 
-	const socials = [
+	const employments: EmploymentDTO[] = [
+		{
+			company: "HU",
+			position: "Software Developer",
+			startDate: "2021",
+			endDate: "2025",
+			active: true,
+			imageKey: "employment/hu",
+		},
+		{
+			company: "Depositado",
+			position: "Student",
+			startDate: "2023",
+			endDate: "NOW",
+			active: true,
+			imageKey: "employment/depositado",
+		},
+	];
+
+	const socials: SocialDto[] = [
 		{
 			username: "wiemanboy",
 			url: "https://github.com/wiemanboy",
@@ -89,6 +112,8 @@
 		</Bio>
 
 		<SkillList class="mt-56 min-h-screen flex flex-col justify-center" {skills} />
+
+		<EmploymentList {employments} />
 
 		<div class="flex justify-center mt-56">
 			<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
