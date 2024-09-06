@@ -71,15 +71,14 @@
 	];
 </script>
 
-<main class="flex flex-col mx-4 gap-2">
-	<div class="min-h-screen my-2 flex justify-center">
-		<div class="flex flex-col justify-center">
-			<ProfileHeader name="Jarno Wieman" />
+<main class="flex justify-center">
+	<div class="mx-4 flex flex-col gap-2 max-2 max-w-[1500px]">
+		<div class="min-h-screen my-2 flex justify-center">
+			<ProfileHeader class="flex flex-col justify-center" name="Jarno Wieman" />
 		</div>
-	</div>
 
-	<div class="min-h-screen flex flex-col justify-center">
-		<Bio content="{$t('profile.bio.description')}" title="{$t('profile.bio.who.i')}">
+		<Bio class="min-h-screen flex flex-col justify-center mt-32" content="{$t('profile.bio.description')}"
+			 title="{$t('profile.bio.who.i')}">
 			<Image
 				alt="{$t('profile.bio.profilePictureAlt')}"
 				height="{350}"
@@ -88,14 +87,11 @@
 				width="{300}"
 			/>
 		</Bio>
-	</div>
 
-	<div class="min-h-screen flex flex-col justify-center">
-		<SkillList class="mt-56" {skills} />
-	</div>
-	<div class="flex justify-center mt-56">
-		<div class="min-h-screen flex flex-col justify-center">
-			<SocialList class="text-xl" {socials} />
+		<SkillList class="mt-56 min-h-screen flex flex-col justify-center" {skills} />
+
+		<div class="flex justify-center mt-56">
+			<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
 		</div>
 	</div>
 </main>
