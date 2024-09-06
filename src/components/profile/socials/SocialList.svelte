@@ -7,6 +7,13 @@ SocialList
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
+	import LinkedinIcon from "~icons/devicon/linkedin";
+	import StackoverflowIcon from "~icons/devicon/stackoverflow";
+	import RedditIcon from "~icons/logos/reddit-icon";
+	import GitHubIcon from "~icons/mdi/github";
+	import InstagramIcon from "~icons/mdi/instagram";
+	import SteamIcon from "~icons/mdi/steam";
+	import TwitterIcon from "~icons/ri/twitter-x-fill";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 	import Hidden from "../../Hidden.svelte";
 	import SocialItem from "./SocialItem.svelte";
