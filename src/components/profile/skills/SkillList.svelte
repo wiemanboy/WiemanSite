@@ -31,15 +31,17 @@ Skills are grouped by sections.
 	 on:inview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
-	<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</h2>
-	<div class="hidden animate-[popIn]"></div>
-	<Hidden>{$t("profile.skills.items.jarno") + ":"}</Hidden>
-	<Hidden>{$t("profile.skills.items.wiemanboy") + ":"}</Hidden>
-	<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
-		{#each skills as skillSection, index}
-			<li style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>
-				<SkillSection {skillSection} />
-			</li>
-		{/each}
-	</ul>
+	<div>
+		<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</h2>
+		<div class="hidden animate-[popIn]"></div>
+		<Hidden>{$t("profile.skills.items.jarno") + ":"}</Hidden>
+		<Hidden>{$t("profile.skills.items.wiemanboy") + ":"}</Hidden>
+		<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
+			{#each skills as skillSection, index}
+				<li style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>
+					<SkillSection {skillSection} />
+				</li>
+			{/each}
+		</ul>
+	</div>
 </div>

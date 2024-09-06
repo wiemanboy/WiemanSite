@@ -71,28 +71,24 @@
 	];
 </script>
 
-<main class="flex flex-col mx-4 gap-2">
+<main class="flex flex-col mx-auto gap-2 max-2 max-w-[1500px]">
 	<div class="min-h-screen my-2 flex justify-center">
-		<div class="flex flex-col justify-center">
-			<ProfileHeader name="Jarno Wieman" />
-		</div>
+		<ProfileHeader class="flex flex-col justify-center" name="Jarno Wieman" />
 	</div>
 
-	<div class="min-h-screen flex flex-col justify-center">
-		<Bio content="{$t('profile.bio.description')}" title="{$t('profile.bio.who.i')}">
-			<Image
-				alt="{$t('profile.bio.profilePictureAlt')}"
-				height="{350}"
-				key="profile_picture"
-				slot="image"
-				width="{300}"
-			/>
-		</Bio>
-	</div>
+	<Bio class="min-h-screen flex flex-col justify-center" content="{$t('profile.bio.description')}"
+		 title="{$t('profile.bio.who.i')}">
+		<Image
+			alt="{$t('profile.bio.profilePictureAlt')}"
+			height="{350}"
+			key="profile_picture"
+			slot="image"
+			width="{300}"
+		/>
+	</Bio>
 
-	<div class="min-h-screen flex flex-col justify-center">
-		<SkillList class="mt-56" {skills} />
-	</div>
+	<SkillList class="mt-56 min-h-screen flex flex-col justify-center" {skills} />
+
 	<div class="flex justify-center mt-56">
 		<SocialList class="min-h-screen flex flex-col justify-center text-xl" {socials} />
 	</div>
