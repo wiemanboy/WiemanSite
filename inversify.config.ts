@@ -6,8 +6,9 @@ import FetchQuotesRepository from "./src/lib/data/quotes/FetchQuotesRepository";
 import types from "./src/lib/types";
 
 const container = new Container();
-container.bind(types.baseUrl).toConstantValue(PUBLIC_API_BASE_URL);
-container.bind(types.apiClient).to(FetchApiClient);
-container.bind(types.quotesRepository).to(FetchQuotesRepository);
+container.bind(types.apiClient).toConstantValue(new FetchApiClient(PUBLIC_API_BASE_URL));
+container
+	.bind(types.quotesRepository)
+	.toConstantValue(new FetchQuotesRepository(container.get(types.apiClient)));
 
 export { container };

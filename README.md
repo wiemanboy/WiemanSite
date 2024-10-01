@@ -136,7 +136,7 @@ This project makes use of dependency injection with the help of [InversifyJS](ht
 
 #### Binding
 
-Before we can use a service we need to bind it to a type in the `inversify.config.ts` file.
+Before we can use an object, we need to bind it to a type in the `inversify.config.ts` file.
 
 First define a type in the `types.ts` file:
 
@@ -149,7 +149,11 @@ const types = {
 Then bind the type to an implementation in the `inversify.config.ts` file:
 
 ```ts
+import { container } from "./inversify.config";
+
 container.bind(types.classType).to(ClassImplementation);
+// or
+container.bind(types.classType).toConstantValue(new ClassImplementation());
 ```
 
 #### Usage
@@ -179,7 +183,14 @@ It is recommended to use a DTO (Data Transfer Object) for the data returned from
 the repository would look like this:
 
 ```ts
-class FetchExampleRepository extends BaseRepository implements ExampleRepository {
+class FetchExampleRepository implements ExampleRepository {
+
+	private apiClient: ApiClient;
+
+	constructor(apiClient: ApiClient) {
+		this.apiClient = apiClient;
+	}
+
 	async getExample(): Promise<ExampleDto> {
 		const result = await this.fetcher.get<ExampleDto>("/example");
 		return result.json();
@@ -187,7 +198,7 @@ class FetchExampleRepository extends BaseRepository implements ExampleRepository
 }
 ```
 
-Here the BaseRepository provides a `fetcher` property that can be used to make network requests.  
+Here an `ApiClient` can be used to make network requests.  
 After the repository is created, it should be bound and used like described in the [DI section](#dependency-injection).
 
 ---
