@@ -1,12 +1,11 @@
-import { inject, injectable } from "inversify";
+import { injectable } from "inversify";
 import type ApiClient from "$lib/network/ApiClient";
-import types from "$lib/types";
 
 @injectable()
 class FetchApiClient implements ApiClient {
 	public readonly baseUrl: string;
 
-	constructor(@inject(types.baseUrl) baseUrl: string) {
+	constructor(baseUrl: string) {
 		this.baseUrl = baseUrl;
 	}
 

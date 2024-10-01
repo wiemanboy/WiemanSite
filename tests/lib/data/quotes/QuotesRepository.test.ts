@@ -1,12 +1,11 @@
-import { injectable } from "inversify";
+import "reflect-metadata";
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import FetchQuotesRepository from "$lib/data/quotes/FetchQuotesRepository";
 import type QuotesRepository from "$lib/data/quotes/QuotesRepository";
 import type QuoteDto from "$lib/dtos/quotes/QuoteDto";
-import types from "$lib/types";
-import { container } from "../../../../inversify.config";
 
 /*
-Tests if the QuotesRepository class currently implemented is working as expected.
+Tests if the QuotesRepository class is working as expected.
  */
 
 let quotesRepository: QuotesRepository;
@@ -18,8 +17,7 @@ const apiClient = {
 };
 
 beforeEach(() => {
-	container.rebind(types.apiClient).to(MockApiClient);
-	quotesRepository = container.get(types.quotesRepository);
+	quotesRepository = new FetchQuotesRepository(apiClient);
 });
 
 describe("QuotesRepository", () => {
@@ -35,11 +33,3 @@ describe("QuotesRepository", () => {
 		expect(quote).toBeDefined();
 	});
 });
-
-@injectable()
-class MockApiClient {
-	get = apiClient.get;
-	post = apiClient.post;
-	put = apiClient.put;
-	delete = apiClient.delete;
-}

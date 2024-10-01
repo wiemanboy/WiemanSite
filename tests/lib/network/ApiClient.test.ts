@@ -1,37 +1,36 @@
+import "reflect-metadata";
 import { beforeEach, describe, expect, it } from "vitest";
 import type ApiClient from "$lib/network/ApiClient";
-import types from "$lib/types";
-import { container } from "../../../inversify.config";
+import FetchApiClient from "$lib/network/FetchApiClient";
 
 /*
-Tests if the Fetcher class is working as expected.
+Tests if the ApiClient class is working as expected.
  */
 
-let fetcher: ApiClient;
+let apiClient: ApiClient;
 
 beforeEach(() => {
-	container.rebind(types.baseUrl).toConstantValue("https://dummyjson.com");
-	fetcher = container.get(types.apiClient);
+	apiClient = new FetchApiClient("https://dummyjson.com");
 });
 
 describe("Fetcher", () => {
 	it("can get data", async () => {
-		const response = await fetcher.get("/test");
+		const response = await apiClient.get("/test");
 		expect(response.status).toBe(200);
 	});
 
 	it("can post data", async () => {
-		const response = await fetcher.post("/test", {});
+		const response = await apiClient.post("/test", {});
 		expect(response.status).toBe(200);
 	});
 
 	it("can put data", async () => {
-		const response = await fetcher.put("/test", {});
+		const response = await apiClient.put("/test", {});
 		expect(response.status).toBe(200);
 	});
 
 	it("can delete data", async () => {
-		const response = await fetcher.get("/test");
+		const response = await apiClient.get("/test");
 		expect(response.status).toBe(200);
 	});
 });
