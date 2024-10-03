@@ -1,4 +1,4 @@
-# Personal Website
+# WiemanSite
 
 This is my personal website, built with [SvelteKit](https://kit.svelte.dev/).
 
@@ -12,7 +12,7 @@ First install the dependencies:
 npm i
 ```
 
-Then rou are ready to start the development server:
+Then you are ready to start the development server:
 
 ```bash
 npm run dev
@@ -65,7 +65,7 @@ Reusable components are stored in the `components` directory.
 
 #### HtmlAttributes
 
-To allow for type completion when using HTML attributes on custom components the following pattern can be used:
+To allow for type completion when using HTML attributes on custom components, the following pattern can be used:
 
 ```sveltehtml
 
@@ -96,8 +96,8 @@ script.)
 ### Styling
 
 This project uses [Tailwind CSS](https://tailwindcss.com/) for styling. You can find the configuration
-in `tailwind.config.js`, this is where all the colors are defined. If custom styles are needed I recommend using scss
-instead of css.
+in `tailwind.config.js`, this is where all the colors are defined. If custom styles are necessary I recommend using scss
+instead of CSS.
 
 #### Dark mode
 
@@ -112,7 +112,7 @@ locales in the `locales` directory.
 
 #### Usage
 
-To use a translation in a component simply import the `t` function from `svelte-i18n` and use it like this:
+To use a translation in a component, import the `t` function from `svelte-i18n` and use it like this:
 
 ```sveltehtml
 
@@ -166,8 +166,9 @@ const class = container.get<Class>(types.classType);
 
 ### Data fetching
 
-For interacting with API data the application uses a repository pattern. This is to allow for easy mocking of data in
-tests. Repositories are defined in the `lib/data` directory and use the aforementioned DI.
+For interacting with API data, the application uses a repository pattern.
+This is to allow for easy mocking of data in tests.
+Repositories are defined in the `lib/data` directory and use the aforementioned DI.
 
 #### Structure
 
@@ -206,7 +207,7 @@ After the repository is created, it should be bound and used like described in t
 ### Icons
 
 This project uses [unplugin icons](https://github.com/unplugin/unplugin-icons) for getting different icons. Unplugin
-icons uses [Iconify](https://iconify.design/) for getting the icons. If you need to find a specific icon look in
+icons use [Iconify](https://iconify.design/) for getting the icons. If you need to find a specific icon look in
 the [icon sets](https://icon-sets.iconify.design/).
 
 ---
@@ -218,7 +219,7 @@ end-to-end testing. You can run the tests with `npm run test`, Or use `npm run t
 to run the tests separately. Vitest supports coverage reports, to generate a coverage report
 use `npm run test:coverage`. Coverage reports will be placed in `test-results/coverage`.
 
-Tests are located in the tests folder, when creating a new test file it should have the same directory structure in
+Tests are located in the tests folder; when creating a new test file, it should have the same directory structure in
 tests as the file you are testing in src. All test files should end with `.test.ts` and integration tests (using
 Playwright) should end with `.integration.test.ts`.
 
