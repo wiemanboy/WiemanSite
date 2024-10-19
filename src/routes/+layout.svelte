@@ -1,5 +1,5 @@
 <script>
-	import "./app.scss";
+	import "../app.scss";
 </script>
 
 <div class="bg-themed min-h-screen">
