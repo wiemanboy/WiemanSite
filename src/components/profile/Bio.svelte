@@ -7,7 +7,7 @@ Profile
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
-	import Hidden from "../Hidden.svelte";
+	import { Hidden } from "$lib/components";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		title: string;

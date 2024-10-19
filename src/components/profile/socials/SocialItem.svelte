@@ -5,8 +5,8 @@ SocialItem
 
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
+	import { Link } from "$lib/components";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
-	import Link from "../../Link.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		social: SocialDto;
