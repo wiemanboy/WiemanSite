@@ -9,11 +9,10 @@ export default defineConfig({
 	},
 	test: {
 		include: ["tests/**/*.{test,spec}.{js,ts}"],
-		exclude: [...configDefaults.exclude, "tests/**/*.integration.{test,spec}.{js,ts}"],
+		exclude: [...configDefaults.exclude, "tests/**/*.{e2e,integration}.{test,spec}.{js,ts}"],
 		coverage: {
 			reportsDirectory: "test-results/coverage",
 			exclude: [...coverageConfigDefaults.exclude, "**/*.config.{js,ts}", "**/i18n.ts"],
-			provider: "istanbul",
 		},
 	},
 	server: {
