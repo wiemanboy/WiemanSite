@@ -7,7 +7,7 @@ The size is used to load a lower quality image for smaller screens. The size is 
 
 <script lang="ts">
 	import { Image } from "@unpic/svelte";
-	import { PUBLIC_IMAGE_BASE_URL } from "$env/static/public";
+	import { env } from "$env/dynamic/public";
 
 	export let alt: string;
 	export let key: string;
@@ -26,6 +26,6 @@ The size is used to load a lower quality image for smaller screens. The size is 
 	height="{height}"
 	layout="fixed"
 	slot="image"
-	src="{PUBLIC_IMAGE_BASE_URL}/{key}?size={size}"
+	src="{env.PUBLIC_IMAGE_BASE_URL}/{key}?size={size}"
 	width="{width}"
 />
