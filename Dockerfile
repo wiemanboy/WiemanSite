@@ -16,5 +16,9 @@ WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/package.json ./package.json
 
+# These dependencies are not bundled correctly so they are copied manually
+COPY --from=builder /app/node_modules/reflect-metadata ./node_modules/reflect-metadata
+COPY --from=builder /app/node_modules/inversify ./node_modules/inversify
+
 EXPOSE 3000
 CMD ["npm", "run", "start"]
