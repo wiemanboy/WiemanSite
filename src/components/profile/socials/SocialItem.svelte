@@ -1,12 +1,13 @@
 <!--
 SocialItem
 
+This component is used to display a single social media link. It is used in the SocialList component.
 -->
 
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
+	import { Link } from "$lib/components";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
-	import Link from "../../Link.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		social: SocialDto;

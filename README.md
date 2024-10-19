@@ -9,8 +9,10 @@ This is my personal website, built with [SvelteKit](https://kit.svelte.dev/).
 First install the dependencies:
 
 ```bash
-npm i
+npm i --force
 ```
+
+We are using force because svelte-i18n does not yet officially support Svelte 5
 
 Then you are ready to start the development server:
 
@@ -130,7 +132,7 @@ keys short and readable.
 
 ---
 
-### Dependency injection
+### injection
 
 This project makes use of dependency injection with the help of [InversifyJS](https://www.npmjs.com/package/inversify).
 
@@ -215,9 +217,12 @@ the [icon sets](https://icon-sets.iconify.design/).
 ## Testing
 
 This project uses [vitest](https://vitest.dev/) for unit testing and [Playwright](https://playwright.dev/) for
-end-to-end testing. You can run the tests with `npm run test`, Or use `npm run test:unit` and `npm run test:integration`
-to run the tests separately. Vitest supports coverage reports, to generate a coverage report
-use `npm run test:coverage`. Coverage reports will be placed in `test-results/coverage`.
+end-to-end testing.
+You can run the tests with `npm test`, Or use `npm run test:unit` and `npm run test:integration`
+to run the tests separately.
+Vitest supports coverage reports, to generate a coverage report
+use `npm run test:coverage`.
+Coverage reports will be placed in `test-results/coverage`.
 
 Tests are located in the tests folder; when creating a new test file, it should have the same directory structure in
 tests as the file you are testing in src. All test files should end with `.test.ts` and integration tests (using
@@ -232,3 +237,41 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+For development, the project included the following commands to quickly build and preview the production build:
+
+```bash
+npm run build:preview
+npm run build:start
+``` 
+
+## Deployment
+
+The following command can be used to start the app after building:
+
+```bash
+npm run start
+```
+
+This project is set to be deployed in a docker container. The Dockerfile is included in the project root.
+
+To build the docker image:
+
+```bash
+docker build -t wiemansite .
+```
+
+A docker-compose file is also included in the project root. To start the app with docker-compose:
+
+```bash
+docker-compose up -d
+```
+
+### Environment variables
+
+The following environment variables are required for the app to run:
+
+- "PUBLIC_API_BASE_URL": The base URL for the API
+- "PUBLIC_IMAGE_BASE_URL": The base URL for images
+
+These are dynamic and are read on runtime.

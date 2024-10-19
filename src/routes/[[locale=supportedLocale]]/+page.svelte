@@ -3,19 +3,15 @@
 <script lang="ts">
 	import { t } from "svelte-i18n";
 	import { page } from "$app/stores";
-	import { container } from "$lib/container";
+	import { Bio, Image, ProfileHeader, SkillList, SocialList } from "$lib/components";
+	import container from "$lib/container";
 	import type ProfileRepository from "$lib/data/profiles/ProfileRepository";
 	import type ProfileDto from "$lib/dtos/profile/ProfileDto";
 	import types from "$lib/types";
-	import Image from "../../components/Image.svelte";
-	import Bio from "../../components/profile/Bio.svelte";
-	import ProfileHeader from "../../components/profile/ProfileHeader.svelte";
-	import SkillList from "../../components/profile/skills/SkillList.svelte";
-	import SocialList from "../../components/profile/socials/SocialList.svelte";
 
 	let locale = $page.params.locale;
 	const profileRepository = container.get<ProfileRepository>(types.profileRepository);
-	const profile: Promise<ProfileDto> = profileRepository.getProfileByName("wiemanboy", locale);
+	const profile: Promise<ProfileDto> = profileRepository.getProfileByName("wiemanboy", locale || "en");
 </script>
 
 <main class="flex justify-center">

@@ -8,8 +8,8 @@ It includes a title and a list of skills.
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
+	import { SkillItem } from "$lib/components";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
-	import SkillItem from "./SkillItem.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		skillSection: SkillSectionDto;

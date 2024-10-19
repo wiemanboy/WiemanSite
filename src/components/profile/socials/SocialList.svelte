@@ -1,6 +1,7 @@
 <!--
 SocialList
 
+This component is used to display a list of social media links. It uses the SocialItem component to display each individual link.
 -->
 
 <script lang="ts">
@@ -14,9 +15,9 @@ SocialList
 	import InstagramIcon from "~icons/mdi/instagram";
 	import SteamIcon from "~icons/mdi/steam";
 	import TwitterIcon from "~icons/ri/twitter-x-fill";
+	import { Hidden, SocialItem } from "$lib/components";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
-	import Hidden from "../../Hidden.svelte";
-	import SocialItem from "./SocialItem.svelte";
+
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const icons = { LinkedinIcon, StackoverflowIcon, RedditIcon, GitHubIcon, InstagramIcon, SteamIcon, TwitterIcon };
@@ -69,7 +70,6 @@ SocialList
 						{:else}
 							{social.platform}
 						{/if}
-
 					</SocialItem>
 				</li>
 			{/each}

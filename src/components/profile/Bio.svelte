@@ -1,13 +1,14 @@
 <!--
-Profile
+Bio
 
+This component displays a short bio about me. It contains a title and a paragraph with a short description about me.
 -->
 
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
-	import Hidden from "../Hidden.svelte";
+	import { Hidden } from "$lib/components";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		title: string;

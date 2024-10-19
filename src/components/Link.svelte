@@ -1,6 +1,7 @@
 <!--
-	Link
-	This is a generic link component that can be used to navigate in the app and to external links.
+Link
+
+This is a generic link component that can be used to navigate in the app and to external links.
  -->
 
 <script lang="ts">

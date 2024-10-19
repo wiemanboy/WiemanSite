@@ -9,9 +9,8 @@ Skills are grouped by sections.
 	import type { HTMLAttributes } from "svelte/elements";
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
+	import { Hidden, SkillSection } from "$lib/components";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
-	import Hidden from "../../Hidden.svelte";
-	import SkillSection from "./SkillSection.svelte";
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		skills: SkillSectionDto[];

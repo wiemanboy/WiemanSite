@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install
+RUN npm install --force
 # Install rollup manually because of bug with optional dependencies (https://github.com/npm/cli/issues/4828)
-RUN npm install -D @rollup/rollup-linux-x64-musl
+RUN npm install -D @rollup/rollup-linux-x64-musl --force
 COPY . ./
 RUN npm run build
 
