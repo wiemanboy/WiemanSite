@@ -13,7 +13,7 @@ beforeEach(() => {
 	apiClient = new FetchApiClient("https://dummyjson.com");
 });
 
-describe("Fetcher", () => {
+describe("ApiClient", () => {
 	it("can get data", async () => {
 		const response = await apiClient.get("/test");
 		expect(response.status).toBe(200);

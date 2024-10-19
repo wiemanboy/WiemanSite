@@ -1,5 +1,5 @@
 const types = {
-	quotesRepository: Symbol.for("QuotesRepository"),
+	profileRepository: Symbol.for("ProfileRepository"),
 	apiClient: Symbol.for("Fetcher"),
 };
 

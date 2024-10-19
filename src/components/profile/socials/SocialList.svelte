@@ -18,6 +18,8 @@ SocialList
 	import Hidden from "../../Hidden.svelte";
 	import SocialItem from "./SocialItem.svelte";
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const icons = { LinkedinIcon, StackoverflowIcon, RedditIcon, GitHubIcon, InstagramIcon, SteamIcon, TwitterIcon };
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
 		socials: SocialDto[];
@@ -50,22 +52,22 @@ SocialList
 					style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.1 + 0.5}s backwards;` : ''}
 				>
 					<SocialItem {social}>
-						{#if social.icon === "github"}
+						{#if social.platform === "github"}
 							<GitHubIcon class="{iconClass}" aria-label="GitHub icon" />
-						{:else if social.icon === "linkedin"}
+						{:else if social.platform === "linkedin"}
 							<LinkedinIcon class="{iconClass}" aria-label="Linkedin icon" />
-						{:else if (social.icon === "twitter")}
+						{:else if (social.platform === "twitter")}
 							<TwitterIcon class="{iconClass}" aria-label="Twitter/X icon" />
-						{:else if (social.icon === "instagram")}
+						{:else if (social.platform === "instagram")}
 							<InstagramIcon class="{iconClass}" aria-label="Instagram icon" />
-						{:else if (social.icon === "reddit")}
+						{:else if (social.platform === "reddit")}
 							<RedditIcon class="{iconClass}" aria-label="Reddit icon" />
-						{:else if (social.icon === "steam")}
+						{:else if (social.platform === "steam")}
 							<SteamIcon class="{iconClass}" aria-label="Reddit icon" />
-						{:else if (social.icon === "stackoverflow")}
+						{:else if (social.platform === "stackoverflow")}
 							<StackoverflowIcon class="{iconClass}" aria-label="Stackoverflow icon" />
 						{:else}
-							{social.icon}
+							{social.platform}
 						{/if}
 
 					</SocialItem>
