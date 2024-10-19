@@ -1,6 +1,7 @@
 <!--
 SocialList
 
+This component is used to display a list of social media links. It uses the SocialItem component to display each individual link.
 -->
 
 <script lang="ts">

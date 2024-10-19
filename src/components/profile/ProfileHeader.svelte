@@ -1,6 +1,7 @@
 <!--
-Header
+ProfileHeader
 
+This component is the header of the profile page. It contains the name of the profile.
 -->
 
 <script lang="ts">

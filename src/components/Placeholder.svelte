@@ -1,5 +1,6 @@
 <!--
 Placeholder
+
 This is a component that will act as a placeholder for components that are not yet implemented.
 -->
 

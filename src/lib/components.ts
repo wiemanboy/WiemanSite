@@ -1,4 +1,3 @@
-import Footer from "../components/Footer.svelte";
 import Hidden from "../components/Hidden.svelte";
 import Image from "../components/Image.svelte";
 import Link from "../components/Link.svelte";
@@ -13,7 +12,6 @@ import SocialList from "../components/profile/socials/SocialList.svelte";
 
 export {
 	Bio,
-	Footer,
 	Hidden,
 	Image,
 	Link,

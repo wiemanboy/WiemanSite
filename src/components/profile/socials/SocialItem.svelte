@@ -1,6 +1,7 @@
 <!--
 SocialItem
 
+This component is used to display a single social media link. It is used in the SocialList component.
 -->
 
 <script lang="ts">

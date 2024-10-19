@@ -1,6 +1,7 @@
 <!--
-Profile
+Bio
 
+This component displays a short bio about me. It contains a title and a paragraph with a short description about me.
 -->
 
 <script lang="ts">
