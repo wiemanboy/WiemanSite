@@ -15,7 +15,7 @@
 
 	let locale = $page.params.locale;
 	const profileRepository = container.get<ProfileRepository>(types.profileRepository);
-	const profile: Promise<ProfileDto> = profileRepository.getProfileByName("wiemanboy", locale);
+	const profile: Promise<ProfileDto> = profileRepository.getProfileByName("wiemanboy", locale || "en");
 </script>
 
 <main class="flex justify-center">
