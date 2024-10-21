@@ -3,7 +3,7 @@
 <script lang="ts">
 	import { t } from "svelte-i18n";
 	import { page } from "$app/stores";
-	import { Bio, Image, ProfileHeader, SkillList, SocialList } from "$lib/components";
+	import { Bio, Image, Loading, ProfileHeader, SkillList, SocialList } from "$lib/components";
 	import container from "$lib/container";
 	import type ProfileRepository from "$lib/data/profiles/ProfileRepository";
 	import type ProfileDto from "$lib/dtos/profile/ProfileDto";
@@ -16,7 +16,11 @@
 
 <main class="flex justify-center">
 	{#await profile}
-		<div>Loading...</div>
+		<div class="h-screen w-screen flex flex-col justify-center">
+			<div class="flex justify-center text-6xl">
+				<Loading />
+			</div>
+		</div>
 	{:then profile}
 		<div class="mx-4 flex flex-col gap-2 max-2 max-w-[1500px]">
 			<div class="min-h-screen my-2 flex justify-center">
