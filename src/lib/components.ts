@@ -1,6 +1,7 @@
 import Hidden from "../components/Hidden.svelte";
 import Image from "../components/Image.svelte";
 import Link from "../components/Link.svelte";
+import Loading from "../components/Loading.svelte";
 import Placeholder from "../components/Placeholder.svelte";
 import Bio from "../components/profile/Bio.svelte";
 import ProfileHeader from "../components/profile/ProfileHeader.svelte";
@@ -15,6 +16,7 @@ export {
 	Hidden,
 	Image,
 	Link,
+	Loading,
 	Placeholder,
 	ProfileHeader,
 	SkillItem,

@@ -1,6 +1,6 @@
 {
     "name": "wiemansite",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "private": false,
     "scripts": {
         "dev": "vite dev",
@@ -55,6 +55,7 @@
     },
     "type": "module",
     "dependencies": {
+        "@iconify-json/svg-spinners": "^1.2.1",
         "@unpic/svelte": "^0.0.53",
         "dotenv": "^16.4.5",
         "eslint-plugin-simple-import-sort": "^12.1.1",
