@@ -9,24 +9,27 @@ This component is the header of the profile page. It contains the name of the pr
 	import { t } from "svelte-i18n";
 	import { inview, type ObserverEventDetails } from "svelte-inview";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		name: string;
 	}
 
-	export let name: $$Props["name"];
+	let {
+		name,
+		...props
+	}: Props = $props();
 
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
 		inView = detail.inView;
 	}
 
-	let inView: boolean;
+	let inView: boolean = $state(false);
 </script>
 
-<div {...$$restProps}>
+<div {...props}>
 	<div
 		class="flex flex-col"
 		class:animate-fadein={inView}
-		on:inview_change={handleChange}
+		oninview_change={handleChange}
 		use:inview={{unobserveOnEnter: true}}
 	>
 		<h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold"
