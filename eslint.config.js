@@ -39,6 +39,7 @@ export default [
 					varsIgnorePattern: "^\\$\\$Props$",
 				},
 			],
+			"@typescript-eslint/no-explicit-any": "off",
 		},
 	},
 	{
