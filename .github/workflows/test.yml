@@ -55,6 +55,8 @@ jobs:
             echo "Tag ${VERSION} does not exist."
             echo "BLOCK_PR=false" >> $GITHUB_ENV
           fi
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
 
       - name: Block pull request if tag exists
         if: env.BLOCK_PR == 'true'
