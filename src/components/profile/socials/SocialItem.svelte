@@ -9,16 +9,16 @@ This component is used to display a single social media link. It is used in the 
 	import { Link } from "$lib/components";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		social: SocialDto;
 	}
 
-	export let social: $$Props["social"];
+	let { social, children, ...props }: Props = $props();
 </script>
 
-<div>
+<div {...props}>
 	<span class="inline">
-		<slot />
+		{@render children?.()}
 	</span>
-	<Link to="{social.url}">{social.username}</Link>
+	<Link to={social.url}>{social.username}</Link>
 </div>

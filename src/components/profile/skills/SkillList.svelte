@@ -12,22 +12,22 @@ Skills are grouped by sections.
 	import { Hidden, SkillSection } from "$lib/components";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		skills: SkillSectionDto[];
 	}
 
-	export let skills: $$Props["skills"];
+	let { skills, ...props }: Props = $props();
+	
+	let inView: boolean = $state(false);
 
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
 		inView = detail.inView;
 	}
-
-	let inView: boolean;
 </script>
 
-<div {...$$restProps}
+<div {...props}
 	 class:animate-fadein={inView}
-	 on:inview_change={handleChange}
+	 oninview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
 	<div>

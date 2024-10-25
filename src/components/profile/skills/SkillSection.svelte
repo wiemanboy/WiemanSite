@@ -11,14 +11,14 @@ It includes a title and a list of skills.
 	import { SkillItem } from "$lib/components";
 	import type SkillSectionDto from "$lib/dtos/profile/skills/SkillSectionDto";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		skillSection: SkillSectionDto;
 	}
 
-	export let skillSection: $$Props["skillSection"];
+	let { skillSection, ...props }: Props = $props();
 </script>
 
-<div>
+<div {...props}>
 	<div class="text-md font-bold border-b mb-2 max-w-72 text-nowrap text-xl">{$t(skillSection.title)}</div>
 	<ul class="flex flex-wrap gap-2">
 		{#each skillSection.skills as skill}

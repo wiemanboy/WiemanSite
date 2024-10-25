@@ -13,16 +13,13 @@ This component is the header of the profile page. It contains the name of the pr
 		name: string;
 	}
 
-	let {
-		name,
-		...props
-	}: Props = $props();
+	let { name, ...props }: Props = $props();
+
+	let inView: boolean = $state(false);
 
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
 		inView = detail.inView;
 	}
-
-	let inView: boolean = $state(false);
 </script>
 
 <div {...props}>

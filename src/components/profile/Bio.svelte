@@ -25,11 +25,11 @@ This component displays a short bio about me. It contains a title and a paragrap
 		...props
 	}: Props = $props();
 
+	let inView: boolean = $state(false);
+
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
 		inView = detail.inView;
 	}
-
-	let inView: boolean = $state(false);
 </script>
 
 <div {...props}>
