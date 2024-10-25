@@ -62,3 +62,5 @@ jobs:
         if: env.BLOCK_PR == 'true'
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Version ${{env.VERSION}} already exists, this will overwrite the existing release. If this is a mistake, please bump the version in package.json."
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN }}
