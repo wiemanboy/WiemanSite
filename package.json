@@ -64,7 +64,7 @@
         "reflect-metadata": "^0.2.2",
         "rimraf": "^6.0.1",
         "sass": "^1.80.3",
-        "svelte-i18n": "^4.0.0",
+        "svelte-i18n": "^4.0.1",
         "svelte-inview": "^4.0.4"
     }
 }
