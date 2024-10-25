@@ -74,24 +74,26 @@ To allow for type completion when using HTML attributes on custom components, th
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		customProp1: string;
-		customProp2: number;
+		customProp2: string;
 	}
 
-	export let customProp1: $$Props["customProp1"];
-	export let customProp2: $$Props["customProp2"];
+	let {
+		customProp1,
+		customProp2,
+		...props
+	}: Props = $props();
 </script>
 
-<div {...$$restProps} {customProp1} {customProp2}>
+<div {...props} {customProp1} {customProp2}>
 	<slot />
 </div>
 ```
 
-Here we extend `HTMLAttributes<HTMLDivElement>` on the `$$Props` to tell our component that it can accept
-HtmlAttributes, any custom props will also need to be defined in the `$$Props` interface.  
-(NOTE: The eslint config includes an exception to the no-var-unused rule, so $$Props doesn't need to be used in the
-script.)
+Here we extend `HTMLAttributes<HTMLDivElement>` on the `Props` to tell our component that it can accept
+HtmlAttributes, any custom props will also need to be defined in the `Props` interface.
+This should also be done if no HTMLAttributes are required.
 
 ---
 
@@ -134,7 +136,7 @@ keys short and readable.
 
 ### injection
 
-This project makes use of dependency injection with the help of [InversifyJS](https://www.npmjs.com/package/inversify).
+This project makes use of injection with the help of [InversifyJS](https://www.npmjs.com/package/inversify).
 
 #### Binding
 
@@ -202,7 +204,7 @@ class FetchExampleRepository implements ExampleRepository {
 ```
 
 Here an `ApiClient` can be used to make network requests.  
-After the repository is created, it should be bound and used like described in the [DI section](#dependency-injection).
+After the repository is created, it should be bound and used like described in the [injection section](#injection).
 
 ---
 

@@ -18,28 +18,25 @@ This component is used to display a list of social media links. It uses the Soci
 	import { Hidden, SocialItem } from "$lib/components";
 	import type SocialDto from "$lib/dtos/profile/socials/SocialDto";
 
-
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const icons = { LinkedinIcon, StackoverflowIcon, RedditIcon, GitHubIcon, InstagramIcon, SteamIcon, TwitterIcon };
-
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLDivElement> {
 		socials: SocialDto[];
 	}
 
-	export let socials: $$Props["socials"];
+	let { socials, ...props }: Props = $props();
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const icons = { LinkedinIcon, StackoverflowIcon, RedditIcon, GitHubIcon, InstagramIcon, SteamIcon, TwitterIcon };
 	const iconClass = "inline";
+	let inView: boolean = $state(false);
 
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
 		inView = detail.inView;
 	}
-
-	let inView: boolean;
 </script>
 
-<div {...$$restProps}
+<div {...props}
 	 class:animate-fadein={inView}
-	 on:inview_change={handleChange}
+	 oninview_change={handleChange}
 	 use:inview={{unobserveOnEnter: true}}
 >
 	<div>
@@ -54,19 +51,19 @@ This component is used to display a list of social media links. It uses the Soci
 				>
 					<SocialItem {social}>
 						{#if social.platform === "github"}
-							<GitHubIcon class="{iconClass}" aria-label="GitHub icon" />
+							<GitHubIcon class={iconClass} aria-label="GitHub icon" />
 						{:else if social.platform === "linkedin"}
-							<LinkedinIcon class="{iconClass}" aria-label="Linkedin icon" />
+							<LinkedinIcon class={iconClass} aria-label="Linkedin icon" />
 						{:else if (social.platform === "twitter")}
-							<TwitterIcon class="{iconClass}" aria-label="Twitter/X icon" />
+							<TwitterIcon class={iconClass} aria-label="Twitter/X icon" />
 						{:else if (social.platform === "instagram")}
-							<InstagramIcon class="{iconClass}" aria-label="Instagram icon" />
+							<InstagramIcon class={iconClass} aria-label="Instagram icon" />
 						{:else if (social.platform === "reddit")}
-							<RedditIcon class="{iconClass}" aria-label="Reddit icon" />
+							<RedditIcon class={iconClass} aria-label="Reddit icon" />
 						{:else if (social.platform === "steam")}
-							<SteamIcon class="{iconClass}" aria-label="Reddit icon" />
+							<SteamIcon class={iconClass} aria-label="Reddit icon" />
 						{:else if (social.platform === "stackoverflow")}
-							<StackoverflowIcon class="{iconClass}" aria-label="Stackoverflow icon" />
+							<StackoverflowIcon class={iconClass} aria-label="Stackoverflow icon" />
 						{:else}
 							{social.platform}
 						{/if}

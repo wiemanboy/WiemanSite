@@ -9,7 +9,7 @@
 	import type ProfileDto from "$lib/dtos/profile/ProfileDto";
 	import types from "$lib/types";
 
-	let locale = $page.params.locale;
+	let locale = $state($page.params.locale);
 	const profileRepository = container.get<ProfileRepository>(types.profileRepository);
 	const profile: Promise<ProfileDto> = profileRepository.getProfileByName("wiemanboy", locale || "en");
 </script>
@@ -25,24 +25,25 @@
 		<div class="mx-4 flex flex-col gap-2 max-2 max-w-[1500px]">
 			<div class="min-h-screen my-2 flex justify-center">
 				<ProfileHeader class="flex flex-col justify-center"
-							   name="{`${profile.firstName} ${profile.lastName}`}" />
+							   name={`${profile.firstName} ${profile.lastName}`} />
 			</div>
 
-			<Bio class="min-h-screen flex flex-col justify-center mt-32" content="{profile.description.content}"
-				 title="{$t('profile.bio.who.i')}">
-				<Image
-					alt="{$t('profile.bio.profilePictureAlt')}"
-					height="{350}"
-					key="profile_picture"
-					slot="image"
-					width="{300}"
-				/>
+			<Bio class="min-h-screen flex flex-col justify-center mt-32" content={profile.description.content}
+				 title={$t('profile.bio.who.i')}>
+				{#snippet image()}
+					<Image
+						alt={$t('profile.bio.profilePictureAlt')}
+						height={350}
+						key="profile_picture"
+						width={300}
+					/>
+				{/snippet}
 			</Bio>
 
-			<SkillList class="mt-56 min-h-screen flex flex-col justify-center" skills="{profile.skillSections}" />
+			<SkillList class="mt-56 min-h-screen flex flex-col justify-center" skills={profile.skillSections} />
 
 			<div class="flex justify-center mt-56">
-				<SocialList class="min-h-screen flex flex-col justify-center text-xl" socials="{profile.socials}" />
+				<SocialList class="min-h-screen flex flex-col justify-center text-xl" socials={profile.socials} />
 			</div>
 		</div>
 	{:catch error}

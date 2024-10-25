@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         # Install rollup manually because of bug with optional dependencies (https://github.com/npm/cli/issues/4828)
-        run: npm install --force && npm install -D @rollup/rollup-linux-x64-gnu --force && npx playwright install
+        run: npm install && npm install -D @rollup/rollup-linux-x64-gnu && npx playwright install
 
       - name: Run tests
         run: npm test

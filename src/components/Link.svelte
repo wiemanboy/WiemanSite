@@ -7,19 +7,21 @@ This is a generic link component that can be used to navigate in the app and to 
 <script lang="ts">
 	import type { HTMLAttributes } from "svelte/elements";
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface Props extends HTMLAttributes<HTMLAnchorElement> {
 		to: string;
 		withLocale?: string;
 		undecorated?: boolean;
 	}
 
-	export let to: $$Props["to"];
-	export let withLocale: $$Props["withLocale"] = "";
-	export let undecorated: $$Props["undecorated"] = false;
+	let { to, withLocale, undecorated, children, ...props }: Props = $props();
 </script>
 
-<a {...$$restProps} href="{withLocale}{to}">
+<a {...props} href="{withLocale}{to}">
 	<span class="{undecorated ? '' : 'text-link hover:underline hover:text-link-hover'}">
-		<slot>{to}</slot>
+		{#if children}
+			{@render children()}
+		{:else}
+			{to}
+		{/if}
 	</span>
 </a>
