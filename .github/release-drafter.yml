@@ -3,4 +3,4 @@ template: |
   ## Changelog
   
   $CHANGES
-change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-template: "- (#$NUMBER) $TITLE @$AUTHOR"
