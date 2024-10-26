@@ -100,5 +100,12 @@ jobs:
           fi
 
       - name: Block PR
+        if: env.BLOCK_PR == 'true'
         run: |
-          gh pr review ${{ github.event.pull_request.number }} --request-changes --body "Version ${{ env.VERSION }} already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json."
+          existing_reviews=$(gh pr view ${{ github.event.pull_request.number }} --json reviews --jq '.reviews[] | select(.body | contains("Version ${{ env.VERSION }} already exists"))')
+          
+          if [[ -n "$existing_reviews" ]]; then
+            echo "A similar review already exists. Skipping the review request."
+          else
+            gh pr review ${{ github.event.pull_request.number }} --request-changes --body "Version ${{ env.VERSION }} already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json."
+          fi
