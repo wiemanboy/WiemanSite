@@ -78,8 +78,9 @@ jobs:
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/app/installations/56423252/access_tokens")
-
+          
           echo "${access_token_response}" >> access_token_response.json
+          echo "$access_token_response"
           access_token=$(echo "${access_token_response}" | jq -r .token)
           
           echo "GH_TOKEN=${access_token}" >> $GITHUB_ENV
