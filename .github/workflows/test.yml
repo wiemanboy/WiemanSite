@@ -68,7 +68,7 @@ jobs:
           
           # Create JWT
           JWT="${header_payload}"."${signature}"
-          echo "GITHUB_TOKEN=${JWT}" >> $GITHUB_ENV
+          echo "GH_TOKEN=${JWT}" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -94,8 +94,5 @@ jobs:
           fi
 
       - name: Block PR
-        if: env.BLOCK_PR == 'true'
-        env:
-          GH_TOKEN: ${{ env.GITHUB_TOKEN }}
         run: |
           gh pr review ${{ github.event.pull_request.number }} --request-changes --body "Version ${{ env.VERSION }} already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json."
