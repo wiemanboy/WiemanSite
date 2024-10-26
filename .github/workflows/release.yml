@@ -13,8 +13,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install jq
-        run: sudo apt-get install jq
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - name: Auth GitHub CLI
+        run: echo "GITHUB_TOKEN=${{steps.app-token.outputs.token}}" >> $GITHUB_ENV
 
       - name: Get version from package.json
         id: get_version
@@ -44,8 +50,6 @@ jobs:
 
       - name: Draft release
         uses: release-drafter/release-drafter@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
           name: ${{ github.event.repository.name }} v${{ env.VERSION }}
           tag: ${{ env.VERSION }}
@@ -57,8 +61,6 @@ jobs:
             ```  
 
       - name: Publish Draft
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           existing_release=$(gh release view "${{ env.VERSION }}" --json id --jq '.id // empty')
           
