@@ -98,7 +98,7 @@ jobs:
       - name: Check if Tag Exists
         id: check_tag
         run: |
-          TAG_EXISTS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          TAG_EXISTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases" | \
             jq --arg VERSION "${{ env.VERSION }}" '.[] | select(.tag_name == $VERSION) | length')
 
@@ -113,7 +113,7 @@ jobs:
       - name: Block PR
         if: env.BLOCK_PR == 'true'
         run: |
-          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          curl -X POST -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             -d '{
               "body": "Version '${{ env.VERSION }}' already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json.",
