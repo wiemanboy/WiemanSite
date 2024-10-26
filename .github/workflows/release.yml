@@ -54,9 +54,18 @@ jobs:
             
             ```bash
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/${{ vars.DOCKER_IMAGE_NAME }}:${{ env.VERSION }}
-            ```
+            ```  
 
       - name: Publish Draft
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        run: gh release edit "${{ env.VERSION }}" --draft=false --repo ${{ github.repository }}
+        run: |
+          existing_release=$(gh release view "${{ env.VERSION }}" --json id --jq '.id // empty')
+          
+          if [[ -n "$existing_release" ]]; then
+            echo "Deleting existing release for version ${{ env.VERSION }}"
+            gh release delete "${{ env.VERSION }}" --yes --repo ${{ github.repository }}
+          fi
+          
+          echo "Publishing new release for version ${{ env.VERSION }}"
+          gh release edit "${{ env.VERSION }}" --draft=false --repo ${{ github.repository }}
