@@ -1,6 +1,0 @@
-template: |
-  
-  ## Changelog
-  
-  $CHANGES
-change-template: "- (#$NUMBER) $TITLE @$AUTHOR"
