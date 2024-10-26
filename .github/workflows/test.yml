@@ -88,28 +88,17 @@ jobs:
           echo "Version: $VERSION"
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
-      - name: Check if Tag Exists
-        id: check_tag
+      - name: Check Tag
         run: |
-          TAG_EXISTS=$(curl -s -H "Authorization: Bearer ${{ env.GH_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases" | \
-            jq --arg VERSION "${{ env.VERSION }}" '.[] | select(.tag_name == $VERSION) | length')
-
+          TAG_EXISTS=$(gh release list --json tagName --jq '.[] | select(.tagName == "${{ env.VERSION }}") | length')
           if [ "$TAG_EXISTS" -gt 0 ]; then
-            echo "Tag ${{ env.VERSION }} already exists. Blocking the PR."
+            echo "Tag ${VERSION} already exists. Blocking the PR."
             echo "BLOCK_PR=true" >> $GITHUB_ENV
           else
-            echo "Tag ${{ env.VERSION }} does not exist."
+            echo "Tag ${VERSION} does not exist."
             echo "BLOCK_PR=false" >> $GITHUB_ENV
           fi
 
       - name: Block PR
-        if: env.BLOCK_PR == 'true'
         run: |
-          curl -X POST -H "Authorization: Bearer ${{ env.GH_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            -d '{
-              "body": "Version '${{ env.VERSION }}' already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json.",
-              "event": "REQUEST_CHANGES"
-            }' \
-            "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/reviews"
+          gh pr review ${{ github.event.pull_request.number }} --request-changes --body "Version ${{ env.VERSION }} already exists; this will overwrite the existing release. If this is a mistake, please bump the version in package.json."
