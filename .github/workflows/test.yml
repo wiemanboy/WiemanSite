@@ -52,6 +52,7 @@ jobs:
           JWT="${HEADER_BASE64}.${PAYLOAD_BASE64}.${SIGNATURE}"
 
           echo "::remove-mask::${JWT}"
+          echo "JWT: $JWT"
           echo "Authenticating with GitHub CLI..."
           echo "$JWT" | gh auth login --with-token
 
