@@ -7,6 +7,13 @@ export default defineConfig({
 	build: {
 		sourcemap: true,
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: "modern",
+			},
+		},
+	},
 	test: {
 		include: ["tests/**/*.{test,spec}.{js,ts}"],
 		exclude: [...configDefaults.exclude, "tests/**/*.{e2e,integration}.{test,spec}.{js,ts}"],
