@@ -17,7 +17,7 @@ Skills are grouped by sections.
 	}
 
 	let { skills, ...props }: Props = $props();
-	
+
 	let inView: boolean = $state(false);
 
 	function handleChange({ detail }: CustomEvent<ObserverEventDetails>) {
@@ -33,8 +33,8 @@ Skills are grouped by sections.
 	<div>
 		<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.skills.title")}:</h2>
 		<div class="hidden animate-[popIn]"></div>
-		<Hidden>{$t("profile.skills.items.jarno") + ":"}</Hidden>
-		<Hidden>{$t("profile.skills.items.wiemanboy") + ":"}</Hidden>
+		<Hidden>{$t("profile.skills.seoText.jarno") + ":"}</Hidden>
+		<Hidden>{$t("profile.skills.seoText.wiemanboy") + ":"}</Hidden>
 		<ul class="flex flex-col lg:flex-row gap-5 mt-5 ">
 			{#each skills as skillSection, index}
 				<li style={inView ? `animation: popIn 0.5s ease-in-out ${index * 0.3 + 0.5}s backwards;` : ''}>

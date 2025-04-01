@@ -1,6 +1,5 @@
 const types = {
-	profileRepository: Symbol.for("ProfileRepository"),
-	apiClient: Symbol.for("Fetcher"),
+	apiClient: Symbol.for("ApiClient"),
 };
 
 export default types;

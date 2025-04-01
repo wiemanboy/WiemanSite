@@ -17,18 +17,13 @@ The size is used to load a lower quality image for smaller screens. The size is 
 	}
 
 	let { alt, key, width, height }: Props = $props();
-
-	let innerWidth = $state(0);
-	let size = $derived(innerWidth < 640 ? "sm" : innerWidth < 768 ? "md" : innerWidth < 1024 ? "lg" : innerWidth < 1280 ? "xl" : "2xl");
 </script>
-
-<svelte:window bind:innerWidth />
 
 <Image
 	{alt}
 	class="rounded"
 	height={height}
 	layout="fixed"
-	src="{env.PUBLIC_IMAGE_BASE_URL}/{key}?size={size}"
+	src="{env.PUBLIC_IMAGE_BASE_URL}/{key}.webp"
 	width={width}
 />

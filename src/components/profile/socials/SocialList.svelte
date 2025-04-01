@@ -42,8 +42,8 @@ This component is used to display a list of social media links. It uses the Soci
 	<div>
 		<h2 class="text-3xl md:text-6xl font-bold">{$t("profile.socials.title")}:</h2>
 		<div class="hidden animate-[popIn]"></div>
-		<Hidden>{$t("profile.socials.links.jarno") + ":"}</Hidden>
-		<Hidden>{$t("profile.socials.links.wiemanboy") + ":"}</Hidden>
+		<Hidden>{$t("profile.socials.seoText.jarno") + ":"}</Hidden>
+		<Hidden>{$t("profile.socials.seoText.wiemanboy") + ":"}</Hidden>
 		<ul class="flex flex-row flex-wrap max-w-[740px] mt-5 text-sm sm:text-xl">
 			{#each socials as social, index}
 				<li class=" basis-1/2 sm:basis-1/3 lg:basis-1/4"
