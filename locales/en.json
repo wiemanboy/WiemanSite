@@ -8,9 +8,11 @@
     },
     "profile": {
         "bio": {
-            "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, choccy milk, mountainbiking, music and playing video games. Feel free to look around and see what I am capable of or check out my socials to see what else I get up to.",
+            "description": "I am a software developer with a passion for creating and learning new things. I am always looking for new challenges and opportunities. Besides that I love cats, pc building, mountainbiking, music and playing video games. Feel free to look around and see what I am capable of or check out my socials to see what else I get up to.",
             "hello": "Hello",
             "introduction": "my name is",
+            "name": "Jarno Wieman",
+            "nickname": "wiemanboy",
             "profilePictureAlt": "A very lovely picture of me, Jarno Wieman",
             "subtitle": "Welcome to my website",
             "who": {
@@ -20,20 +22,258 @@
             }
         },
         "skills": {
-            "items": {
+            "sections": [
+                {
+                    "title": "Programming Languages",
+                    "skills": [
+                        {
+                            "name": "Java",
+                            "level": 5
+                        },
+                        {
+                            "name": "C#",
+                            "level": 3
+                        },
+                        {
+                            "name": "Golang",
+                            "level": 4
+                        },
+                        {
+                            "name": "Bash",
+                            "level": 4
+                        },
+                        {
+                            "name": "Python",
+                            "level": 4
+                        },
+                        {
+                            "name": "JavaScript",
+                            "level": 5
+                        },
+                        {
+                            "name": "TypeScript",
+                            "level": 5
+                        },
+                        {
+                            "name": "php",
+                            "level": 5
+                        },
+                        {
+                            "name": "html",
+                            "level": 5
+                        },
+                        {
+                            "name": "css",
+                            "level": 5
+                        },
+                        {
+                            "name": "scss",
+                            "level": 5
+                        },
+                        {
+                            "name": "sass",
+                            "level": 5
+                        }
+                    ]
+                },
+                {
+                    "title": "Frameworks",
+                    "skills": [
+                        {
+                            "name": "Spring Boot",
+                            "level": 5
+                        },
+                        {
+                            "name": "ASP.NET Core",
+                            "level": 3
+                        },
+                        {
+                            "name": "Gin",
+                            "level": 4
+                        },
+                        {
+                            "name": "Laravel",
+                            "level": 5
+                        },
+                        {
+                            "name": "Svelte",
+                            "level": 5
+                        },
+                        {
+                            "name": "SvelteKit",
+                            "level": 5
+                        },
+                        {
+                            "name": "React.js",
+                            "level": 3
+                        },
+                        {
+                            "name": "Next.js",
+                            "level": 3
+                        },
+                        {
+                            "name": "Vue.js",
+                            "level": 3
+                        },
+                        {
+                            "name": "Nuxt.js",
+                            "level": 4
+                        }
+                    ]
+                },
+                {
+                    "title": "Tools",
+                    "skills": [
+                        {
+                            "name": "AWS",
+                            "level": 3
+                        },
+                        {
+                            "name": "Docker",
+                            "level": 5
+                        },
+                        {
+                            "name": "Docker Swarm",
+                            "level": 4
+                        },
+                        {
+                            "name": "Git",
+                            "level": 5
+                        },
+                        {
+                            "name": "GitHub",
+                            "level": 5
+                        },
+                        {
+                            "name": "Github Actions",
+                            "level": 4
+                        },
+                        {
+                            "name": "Postman",
+                            "level": 5
+                        },
+                        {
+                            "name": "Swagger",
+                            "level": 5
+                        },
+                        {
+                            "name": "OpenApi",
+                            "level": 5
+                        },
+                        {
+                            "name": "Figma",
+                            "level": 5
+                        }
+                    ]
+                },
+                {
+                    "title": "Concepts",
+                    "skills": [
+                        {
+                            "name": "OOP",
+                            "level": 5
+                        },
+                        {
+                            "name": "Functional Programming",
+                            "level": 5
+                        },
+                        {
+                            "name": "CI/CD",
+                            "level": 5
+                        },
+                        {
+                            "name": "TDD",
+                            "level": 5
+                        },
+                        {
+                            "name": "DDD",
+                            "level": 5
+                        },
+                        {
+                            "name": "SOLID",
+                            "level": 5
+                        },
+                        {
+                            "name": "Xtreme Programming",
+                            "level": 5
+                        },
+                        {
+                            "name": "REST",
+                            "level": 5
+                        },
+                        {
+                            "name": "CIA Triad",
+                            "level": 4
+                        },
+                        {
+                            "name": "OWasp",
+                            "level": 4
+                        },
+                        {
+                            "name": "ISO-25010:2023",
+                            "level": 5
+                        },
+                        {
+                            "name": "Scrum",
+                            "level": 5
+                        },
+                        {
+                            "name": "Agile",
+                            "level": 5
+                        }
+                    ]
+                }
+            ],
+            "seoText": {
                 "jarno": "What skills does Jarno Wieman posses",
                 "wiemanboy": "What skills does wiemanboy posses"
-            },
-            "section": {
-                "concepts": "Concepts",
-                "frameworks": "Frameworks",
-                "programmingLanguages": "Programming Languages",
-                "tools": "Tools"
             },
             "title": "These are some of the skills i posses"
         },
         "socials": {
-            "links": {
+            "items": [
+                {
+                    "username": "wiemanboy",
+                    "platform": "github",
+                    "url": "https://github.com/wiemanboy"
+                },
+                {
+                    "username": "Jarno Wieman",
+                    "platform": "linkedin",
+                    "url": "https://www.linkedin.com/in/jarnowieman/"
+                },
+                {
+                    "username": "wiemanboy",
+                    "platform": "stackoverflow",
+                    "url": "https://stackoverflow.com/users/20792492/wiemanboy"
+                },
+                {
+                    "username": "wiemanboy",
+                    "platform": "instagram",
+                    "url": "https://www.instagram.com/wiemanboy/"
+                },
+                {
+                    "username": "@wiemanboy",
+                    "platform": "twitter",
+                    "url": "https://x.com/wiemanboy"
+                },
+                {
+                    "username": "wiemanboy",
+                    "platform": "steam",
+                    "url": "https://steamcommunity.com/id/wiemanboy/"
+                },
+                {
+                    "username": "u/wiemanboy",
+                    "platform": "reddit",
+                    "url": "https://www.reddit.com/user/wiemanboy/"
+                },
+                {
+                    "username": "r/jarno",
+                    "platform": "reddit",
+                    "url": "https://www.reddit.com/r/Jarno/"
+                }
+            ],
+            "seoText": {
                 "jarno": "Jarno Wieman social media links",
                 "wiemanboy": "Wiemanboy social media links"
             },
