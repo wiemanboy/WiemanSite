@@ -7,7 +7,6 @@ The size is used to load a lower quality image for smaller screens. The size is 
 
 <script lang="ts">
 	import { Image } from "@unpic/svelte";
-	import { env } from "$env/dynamic/public";
 
 	interface Props {
 		alt: string;
@@ -24,6 +23,6 @@ The size is used to load a lower quality image for smaller screens. The size is 
 	class="rounded"
 	height={height}
 	layout="fixed"
-	src="{env.PUBLIC_IMAGE_BASE_URL}/{key}.webp"
+	src="/assets/images/{key}.webp"
 	width={width}
 />
