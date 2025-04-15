@@ -63,37 +63,7 @@ Environment variables are defined in a `.env` file. You can find an example in `
 
 ### Components
 
-Reusable components are stored in the `components` directory.
-
-#### HtmlAttributes
-
-To allow for type completion when using HTML attributes on custom components, the following pattern can be used:
-
-```sveltehtml
-
-<script lang="ts">
-	import type { HTMLAttributes } from "svelte/elements";
-
-	interface Props extends HTMLAttributes<HTMLDivElement> {
-		customProp1: string;
-		customProp2: string;
-	}
-
-	let {
-		customProp1,
-		customProp2,
-		...props
-	}: Props = $props();
-</script>
-
-<div {...props} {customProp1} {customProp2}>
-	<slot />
-</div>
-```
-
-Here we extend `HTMLAttributes<HTMLDivElement>` on the `Props` to tell our component that it can accept
-HtmlAttributes, any custom props will also need to be defined in the `Props` interface.
-This should also be done if no HTMLAttributes are required.
+Reusable components are stored in the `components` directory, and should be added to `lib/components.ts` for easy access.
 
 ---
 
